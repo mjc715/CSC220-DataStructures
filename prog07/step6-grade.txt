@@ -1,0 +1,25 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+Enter word file:  
+words
+Enter starting word 
+snow
+Enter target word 
+rain
+Select 0: Human plays
+Select 1: Computer plays
+Select 2: Computer solve2
+Select 3: Computer solve3
+2
+Got to rain from snow
+snow
+show
+shop
+ship
+slip
+slid
+said
+raid
+rain
+Polled queue 117 times.
+
+SCORE: 10/10

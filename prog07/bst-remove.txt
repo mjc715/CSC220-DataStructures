@@ -1,0 +1,213 @@
+put(n, 0)
+n
+0
+
+get(n) = 0
+put(o, 1)
+ n 
+ 0 
+  o
+  1
+
+get(o) = 1
+put(t, 2)
+   n   
+   0   
+     o 
+     1 
+      t
+      2
+
+get(t) = 2
+put(b, 3)
+   n   
+   0   
+ b   o 
+ 3   1 
+      t
+      2
+
+get(b) = 3
+put(a, 4)
+   n   
+   0   
+ b   o 
+ 3   1 
+a     t
+4     2
+
+get(a) = 4
+put(l, 5)
+   n   
+   0   
+ b   o 
+ 3   1 
+a l   t
+4 5   2
+
+get(l) = 5
+put(a, 6)
+   n   
+   0   
+ b   o 
+ 3   1 
+a l   t
+6 5   2
+
+get(a) = 6
+put(n, 7)
+   n   
+   7   
+ b   o 
+ 3   1 
+a l   t
+6 5   2
+
+get(n) = 7
+put(c, 8)
+       n       
+       7       
+   b       o   
+   3       1   
+ a   l       t 
+ 6   5       2 
+    c          
+    8          
+
+get(c) = 8
+put(e, 9)
+               n               
+               7               
+       b               o       
+       3               1       
+   a       l               t   
+   6       5               2   
+         c                     
+         8                     
+          e                    
+          9                    
+
+get(e) = 9
+put(d, 10)
+                               n                               
+                               7                               
+               b                               o               
+               3                               1               
+       a               l                               t       
+       6               5                               2       
+                   c                                           
+                   8                                           
+                     e                                         
+                     9                                         
+                    d                                          
+                    10                                          
+
+get(d) = 10
+remove(n) returns 7
+                               o                               
+                               1                               
+               b                               t               
+               3                               2               
+       a               l                                       
+       6               5                                       
+                   c                                           
+                   8                                           
+                     e                                         
+                     9                                         
+                    d                                          
+                    10                                          
+
+get(n) = null
+remove(o) returns 1
+                               t                               
+                               2                               
+               b                                               
+               3                                               
+       a               l                                       
+       6               5                                       
+                   c                                           
+                   8                                           
+                     e                                         
+                     9                                         
+                    d                                          
+                    10                                          
+
+get(o) = null
+remove(t) returns 2
+               b               
+               3               
+       a               l       
+       6               5       
+                   c           
+                   8           
+                     e         
+                     9         
+                    d          
+                    10          
+
+get(t) = null
+remove(b) returns 3
+       c       
+       8       
+   a       l   
+   6       5   
+         e     
+         9     
+        d      
+        10      
+
+get(b) = null
+remove(a) returns 6
+       c       
+       8       
+           l   
+           5   
+         e     
+         9     
+        d      
+        10      
+
+get(a) = null
+remove(l) returns 5
+   c   
+   8   
+     e 
+     9 
+    d  
+    10  
+
+get(l) = null
+remove(a) returns null
+   c   
+   8   
+     e 
+     9 
+    d  
+    10  
+
+get(a) = null
+remove(n) returns null
+   c   
+   8   
+     e 
+     9 
+    d  
+    10  
+
+get(n) = null
+remove(c) returns 8
+ e 
+ 9 
+d  
+10  
+
+get(c) = null
+remove(e) returns 9
+d
+10
+
+get(e) = null
+remove(d) returns 10
+
+
+get(d) = null

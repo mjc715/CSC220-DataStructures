@@ -1,0 +1,129 @@
+DONE 8/10
+0. How many cycles per second in a GHz (giga Hertz)?
+
+1 billion
+
+
+CORRECT
+
+
+
+1. Which power of 2 is closest to a million?  What is the nearest integer to
+   log 1000000?
+      2
+
+2^20, 20
+
+
+CORRECT
+
+
+2. What is the minimum time to the nearest second that a computer with 16 GB RAM
+   and a quad (4) core 2 GHz processor can locate all bytes in its RAM which are
+   set to 'V'?
+
+
+2 seconds
+
+
+CORRECT
+
+
+3. Give at least two reasons why it is a harder task for Google to find the best
+   ten web pages with Victor Milenkovic on them (compared to #2).
+
+
+"Victor Milenkovic" is larger than just "V" and Google is limited by internet speeds.
+
+
+
+
+
+CORRECT
+
+
+
+4. If a single weighing can determine that a pile of coins contains one real coin,
+   how many weighings does it take to locate the one real coin in a pile of 1000?
+
+
+It takes 10 weighings.
+
+
+
+CORRECT
+
+
+5. Same question, pile of n?
+
+Weighings = log(n) / log(2)
+
+CORRECT
+
+
+public class Computer {
+    private int ramSize;	// gibibytes
+    private double speed;	// gigaHertz
+
+    public Computer (int ram, double speed) {
+	ramSize = ram;
+        this.speed = speed;
+    }
+    public int getRamSize () { return ramSize; }
+    public int getSpeed () { return speed; }
+    public double getPower () { return ramSize * speed; }
+}
+
+public class Laptop extends Computer {
+    private double weight;
+    
+    public Laptop (int ram, double speed, double weight) {
+	super(ram, speed);
+        this.weight = weight;
+    }
+    public double getWeight () { return weight; }
+    public double getPower() { return ramSize * speed / 2; }
+}
+-------------------------------------------------------------------------
+
+6. Why doesn't Laptop.getPower compile and what are two ways to fix it?
+
+It doesn't work because ramSize and speed are private variables and can't be 
+accessed by the Laptop class. It can be fixed by either using the getRamSize and
+getSpeed methods instead or changing the ramSize and speed variables to protected
+instead of private.
+
+
+
+CORRECT
+
+
+
+
+
+
+
+After you fix Laptop.getPower, what will the following code (#7-#9) do?
+Answer compiler error, runtime exception, or what it prints out.
+
+7. 	Computer c = new Laptop(8, 2.5, 7.5);
+	System.out.println(c.getWeight());
+
+
+7.5
+WRONG: compiler error
+
+
+8. 	Computer c = new Laptop(8, 2.5, 7.5);
+	System.out.println(c.getPower());
+
+10.0
+CORRECT
+
+
+9. 	Computer c = new Computer(16, 3.0);
+	Laptop l = (Laptop) c;
+	System.out.println(l.getPower());
+
+24.0
+WRONG: runtime error

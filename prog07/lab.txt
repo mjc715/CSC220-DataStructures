@@ -1,0 +1,153 @@
+1. In Heap, the parent, left, and right (index) of index is
+   parent(index), left(index), and right(index).
+   isRoot(index) is true if index is the root (index==0).
+   The element at index is less than its parent if
+	compare(index, parent(index)) < 0   
+   To swap the element at index with its parent:
+	index = swap(index, parent(index))
+
+   offer() adds a new element to the end and sets index to the index
+   of the new element (size()-1).
+
+   Add a loop:
+     while (the element at) index is less than its parent,
+        swap it with its parent.
+
+   Test output is heap-offer.txt.
+
+
+2. isValid(index) is true if 0<=index<size(). The element at
+   index has a left child if isValid(left(index)) is true.
+   index has a right child if isValid(right(index)) is true.
+
+   Add a loop to poll():
+   while (the element at) index is greater than its left or right child,
+      swap it with its smallest child.
+
+   Use compare and swap as in #1 except left(index) and/or
+   right(index) instead of parent(index).
+
+   Keep in mind that it may not have either or it may have a left
+   child but not a right child.  If it has only one child, then that's
+   its smallest child.  Otherwise you have to compare them.
+
+   Test output is heap-poll.txt.
+
+
+3. BST (Binary Search Tree) is an implementation of Map.  The Entry
+   class has data, left, and right.  In a binary search tree, left is
+   less and right is greater.
+
+   Implement the (private) BST find method using the notes.  Methods
+   in BST should use RECURSION not iteration.  Implement get.  (Look
+   at containsKey.)  Your get should not call containsKey and should
+   have only one call to find.  (What does find return if the key is
+   not there?)
+
+
+4. Implement the private add method using the notes.  Remember, you
+   must put the value returned by the recursive call to add() in the
+   right place (or left place :-).
+
+   Now, implement the public put method using add.  What do you do
+   with the value add returns?
+
+   Test the program.  The output should be as in bst-put.txt, only
+   the removes won't happen.
+
+   Copy prog06/Jumble.java to prog07 and change the package at the top
+   to prog07 (if this does not happen automatically).  Switch it to
+   using BST.  Does it work with words?  How fast can it load dict?
+
+
+HOMEWORK
+
+DUE WEDNESDAY MARCH 9
+
+5. Copy your Game.java (snow to rain game) from prog05 to prog07 and
+   change the package to prog07 at the top.
+
+   a. Add a method that returns the number of letters two words
+      differ.  For example lettersDifferent("said", "rain") is 2.
+      Position matters so lettersDifferent("arin", "rain") is also 2.
+      You can assume the words have the same length.
+
+  static int lettersDifferent (String word, String target) {
+
+   b. Add a method the determines the distance of an Node back to the
+      start word by counting how many times you can follow next
+      before reaching null.
+
+  int distanceToStart (Node node) {
+
+   c. Create a Comparator class for Node inside Game:
+
+  protected class NodeComparator implements Comparator<Node> {
+
+      Its constructor should take the target word as an argument and
+      save it in the class.
+
+      It should also have a priority method that returns the sum of
+      the distance to start and the letters different from the target:
+
+    int priority (Node node) {
+
+      The compare method, required by the interface, returns the
+      difference of priorities.
+
+   d. Download TestNodeComparator.java from the course web site/prog07.
+      If your Node class is private, you will have to make it protected.
+      Run it.
+
+
+3. If you haven't yet, you will need to finish solve from the prog06
+   homework.
+
+   Add code to solve so it displays a message about how many times it
+   polls the queue.  (Poll is expensive because you have the check the
+   entire dictionary for neighbors.)  You should get 481 for "snow" to
+   "rain".
+
+   Copy all of solve and call the new method solve2.  In solve2, use a
+   PriorityQueue (import java.util.PriorityQueue) as the Queue.  Give
+   its constructor a new NodeComparator on the target word.0
+
+   Add a button for solve2.  It should report only 117 polls (epic!) but
+   now take eight steps to get from snow to rain (brutal!).
+
+
+4. Implement the remove method in Heap.  Test output is
+   heap-remove.txt.
+
+
+5. In Game, copy solve2 to solve3 and add another button.
+   Currently, we only accept a nextNode if it is not the start node,
+   its next is null, and it is one letter different from theNode.
+
+   Add an else if whose condition is nextNode is not the start node
+   and is one letter different from theNode and its distance to start
+   is greater than theNode's plus 1.  In other words, we HAVE seen it
+   before but now we have found a shorter path to it.
+
+   If that condition is true, set the next of nextNode to
+   theNode, remove nextNode from the queue and offer it to the queue
+   again.
+
+   Add a button for solve3.  Now it should get from snow to rain in
+   only seven steps using only 74 polls!
+
+
+LAB ON MARCH 9
+
+8. Change the first line of the public remove method.  Implement the
+   private remove method based on the notes.  It will call removeRoot.
+
+
+9. Implement removeRoot.  It will call getMinimum and removeMinimum.
+   The entry returned by getMinimum becomes the root.
+
+
+10. Implement getMinimum and removeMinimum.  Correct output in
+    bst-remove.txt.
+
+

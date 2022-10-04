@@ -1,0 +1,47 @@
+1. Finish Jumble.java.  There are two exercises.  Verify that you
+   cannot unscramble zagboe using word (the dictionary file I gave you
+   last week).
+
+   I put a bigger dictionary file called dict into prog06.  Verify
+   that Jumble can unscramble zagboe using dict.
+
+
+2. Implement find in LinkedMap.java.  Use TestLinkedMap.java to test.
+
+
+3. Implement add in LinkedMap.java.  Use TestLinkedMap to test.
+
+
+4. Finish get.  If the entry is the one you want, return its value.
+
+   Finish put.  If the entry is the one you want, set its value.  What
+   do you return?
+
+
+5. In Jumble.main, comment out the line with TreeMap and uncomment the
+   one with LinkedMap.  How long does it take to load word?  Can you
+   unscramble retupmoc?  How about zagboe?  Try dict for that one...
+
+
+HOMEWORK
+
+6. Implement remove(Entry entry).  Add tests to TestLinkedQueue to
+   test it.
+
+
+7. Implement remove(Object keyAsObject).  In Jumble, remove each key
+   after you add it, check that is is not there (print a warning if it
+   IS still there), and then add it back again.  Test.
+
+
+8. Implement Iter.  Test.
+
+
+9. In SkipMap, follow the instructions to finish put and find.  Switch
+   to SkipMap in Jumble, comment out the warning from #7 (because you
+   haven't implemented SkipMap remove yet), and test on dict.  Faster?
+
+
+10. Implement SkipMap remove and test (put back the warning).
+
+

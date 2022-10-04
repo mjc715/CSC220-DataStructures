@@ -1,0 +1,14 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+testing ArrayStack reallocate
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+testing ListStack
+Note: StackTest3.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+empty returned false instead of true
+
+check for test program
+grep: mjc715/test/prog04/LinkedStackTest.java: No such file or directory
+
+SCORE: 15/30

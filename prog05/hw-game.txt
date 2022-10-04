@@ -1,0 +1,45 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+
+Testing Game
+sendMessage("Current word: fail
+Target word: pass")
+getInfo("Enter next word" returns "pass".
+sendMessage("Words do not differ by one letter.")
+sendMessage("Current word: fail
+Target word: pass")
+getInfo("Enter next word" returns null.
+Should have rejected pass because more than one letter changed.
+
+sendMessage("Current word: fail
+Target word: pass")
+getInfo("Enter next word" returns "fasl".
+sendMessage("fasl is not a word.")
+sendMessage("Current word: fail
+Target word: pass")
+getInfo("Try again:" returns null.
+Should have rejected fasl as not a real word.
+
+sendMessage("Current word: fail
+Target word: pass")
+getInfo("Enter next word" returns "fall".
+sendMessage("Current word: fall
+Target word: pass")
+getInfo("Enter next word" returns "pall".
+sendMessage("Current word: pall
+Target word: pass")
+getInfo("Enter next word" returns "pals".
+sendMessage("Current word: pals
+Target word: pass")
+getInfo("Enter next word" returns "pass".
+sendMessage("You win!")
+Should have let me win.
+
+sendMessage("Got to pass from fail")
+sendMessage("fail
+fall
+pall
+pals
+pass")
+Should have gotten from fail to pass in 4 steps.
+
+SCORE: 40/40

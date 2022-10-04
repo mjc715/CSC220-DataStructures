@@ -1,0 +1,141 @@
+Quick IQ test:  what's the next number in this sequence?
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ?
+
+This is the famous Fibonacci sequence.
+
+For this lab, you will create implementations of the Fibonacci
+sequences with different running times and test your ability to
+predict their running times using the O() analysis you learned in
+class.
+
+0. Test prog03.jar.
+
+   Try different starting buttons.  Each has a different O() time:
+   O(1), O(log n), O(n) and O(phi^n)
+
+   The last one is phi to the n'th power, where
+
+	phi = (sqrt(5)+1)/2 = 1.61803399...
+
+   This is called the Golden Ratio.
+
+
+1. Run IntelliJ.  Create package prog03 (inside the src of the ONE
+   project csc220) and install the java files I provided.
+
+   Implement Main.time(fib, n) and Main.averageTime(fib, n, ncalls).
+
+   Run Main.  You should see something like this:
+
+prog03.ExponentialFib@7e9e5f8a
+0 0.0
+1 1.0
+2 1.0
+3 2.0
+4 3.0
+5 5.0
+6 8.0
+7 13.0
+8 21.0
+9 34.0
+10 55.0
+n1 20 time1 21.492074000000038
+c 0.0014207757052900898
+n2 30 estimated time 2643.3503581400405
+n2 30 actual time 2340.2770899999996
+doExperiments prog03.ExponentialFib@3d4eac69
+
+What the program did was use the running time on n=20 to determine the
+constant and then estimate the running time for n=30.  It's close but
+has only one digit of accuracy.  (Look at the labExperiments method.)
+
+
+2. I picked 1000 calls for n1 and 100 calls for n2.  What numbers
+   would correspond to one second of total calling time?  Modify your
+   program to use these numbers of calls.
+
+
+3. Using the comments I provided, write Main.accurateTime(fib, n),
+   which does the same thing automatically.
+   Modify Main.labExperiments to call this method instead.
+
+
+4. Add code to estimate how long it would take to compute fib(100).
+   Would it finish running before end of lab?  If not, when will it
+   finish?  Print the number of YEARS.
+
+
+5. Create a class LinearFib that extends Fib and calculate fib(n) in
+   O(n) time.  How?  Set a=0 and b=1.  What do you have to do to make
+   a=1 and b=1?  a=1 and b=2?  a=2 and b=3?  a=3 and b=5?  a=5 and b=8?
+
+   What should the O() method return?
+
+
+5. Switch to LinearFib in Main.
+
+
+6. Ditto LogFib.
+
+
+7. Implement ConstantFib, which is just like LogFib only it calls
+   Math.pow instead of the private pow.  Test its running time.
+
+
+HOMEWORK DUE WEDNESDAY AT 11AM
+
+8. Implement Fib.recordConstant that sets c to the constant corresponding
+   to that n and t.
+
+   Implement Fib.estimateTime that estimates the running time for n
+   using the saved value of c.
+
+
+9. Modify doExperiments(Fib fib) in Main.  In a loop it should:
+
+   Ask the user for an integer using getInteger.
+
+   Quit (by returning) if the user clicks CANCEL (getInteger returns -1).
+
+   Get the estimated time from fib (unless this is the first time
+   around the loop)
+
+   and display the estimated time (including units).
+
+   Call accurateTime go get the actual time.
+
+   Record the resulting constant in fib.
+
+   Display n, fibn (saved in the time() method), and if it is not
+   the first time around the loop, the percentage error between the
+   estimated time and the actual time.
+
+
+10. When you have this working, add a check before calling accurateTime:
+
+   Check if the estimated time is more than an hour.
+
+   If so, warn the user,
+
+   and put up a yes/no box to check if the user really wants to do it.
+
+
+11. Modify getInteger to catch an exception resulting from typing
+   something that is not an integer.  Also it should not accept a
+   negative integer.  In either case, it should issue a reasonable
+   warning and ask the user to try again.
+
+
+12. Modify doExperiments() in Main.
+
+   In a loop, it should give the user the choice of exiting or
+   testing one of the five Fib implementations and then call
+   doExperiments(fib) on that one.
+
+
+13. MysteryFib inherits ExponentialFib's O() method, but that is
+    clearly wrong.  Try overriding the O() method in MysteryFib with
+    different functions to figure out which one is best.  Leave the
+    best one in your solution.
+

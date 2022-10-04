@@ -1,0 +1,15 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+TestLinkedMap with testRemove
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+testing find
+testing add
+testing remove
+
+Jumble using LinkedMap with test of remove
+
+aback sorted is aabck
+put(aabck, aback)
+remove(aabck) = null
+
+SCORE: 10/20

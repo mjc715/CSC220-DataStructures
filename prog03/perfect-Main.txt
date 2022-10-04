@@ -1,0 +1,222 @@
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 0
+doExperiments prog03.ExponentialFib@55f96302
+UI Main calls getInfo("Enter n")
+UI getInfo returns ""
+UI Main calls sendMessage(" is not an integer.")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "abc"
+UI Main calls sendMessage("abc is not an integer.")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "-10"
+UI Main calls sendMessage("-10 is negative...invalid")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10"
+UI Main calls sendMessage("fib(10) = 55.0 in 0.19064115858987693 microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10"
+UI Main calls sendMessage("Estimated time on input 10 is 0.19064115858987693 microseconds.")
+UI Main calls sendMessage("fib(10) = 55.0 in 0.16999762049908307 microseconds with error 12.143427672803933%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10"
+UI Main calls sendMessage("Estimated time on input 10 is 0.16999762049908307 microseconds.")
+UI Main calls sendMessage("fib(10) = 55.0 in 0.17284256618526586 microseconds with error -1.6459751489302483%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "20"
+UI Main calls sendMessage("Estimated time on input 20 is 21.258230323777283 microseconds.")
+UI Main calls sendMessage("fib(20) = 6765.0 in 19.13642029580823 microseconds with error 11.087810547481705%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "30"
+UI Main calls sendMessage("Estimated time on input 30 is 2353.6241054466377 microseconds.")
+UI Main calls sendMessage("fib(30) = 832040.0 in 2356.198284688995 microseconds with error -0.1092513842780048%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "40"
+UI Main calls sendMessage("Estimated time on input 40 is 289793.2316667806 microseconds.")
+UI Main calls sendMessage("fib(40) = 1.02334155E8 in 290262.9856666667 microseconds with error -0.161837376132264%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 1
+doExperiments prog03.LinearFib@63947c6b
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("fib(100) = 3.54224848179262E20 in 0.04140501718994609 microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time on input 100 is 0.04140501718994609 microseconds.")
+UI Main calls sendMessage("fib(100) = 3.54224848179262E20 in 0.04572261356737695 microseconds with error -9.443021823475695%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time on input 100 is 0.04572261356737695 microseconds.")
+UI Main calls sendMessage("fib(100) = 3.54224848179262E20 in 0.04563327684376483 microseconds with error 0.19577100263473765%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "200"
+UI Main calls sendMessage("Estimated time on input 200 is 0.09126655368752966 microseconds.")
+UI Main calls sendMessage("fib(200) = 2.8057117299251016E41 in 0.11441269906442206 microseconds with error -20.230398868450397%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "400"
+UI Main calls sendMessage("Estimated time on input 400 is 0.22882539812884412 microseconds.")
+UI Main calls sendMessage("fib(400) = 1.760236806450138E83 in 0.300747462250494 microseconds with error -23.914437576116814%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "800"
+UI Main calls sendMessage("Estimated time on input 800 is 0.601494924500988 microseconds.")
+UI Main calls sendMessage("fib(800) = 6.928308186422468E166 in 0.6465282416230693 microseconds with error -6.965406029136174%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 2
+doExperiments prog03.LogFib@4dc63996
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("fib(100) = 3.5422484817926226E20 in 0.0443632126130897 microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time on input 100 is 0.0443632126130897 microseconds.")
+UI Main calls sendMessage("fib(100) = 3.5422484817926226E20 in 0.03322213229160207 microseconds with error 33.53511515666286%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time on input 100 is 0.03322213229160207 microseconds.")
+UI Main calls sendMessage("fib(100) = 3.5422484817926226E20 in 0.03314515730566753 microseconds with error 0.23223599521544822%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "1000"
+UI Main calls sendMessage("Estimated time on input 1000 is 0.049717735958501284 microseconds.")
+UI Main calls sendMessage("fib(1000) = 4.3466557686937765E208 in 0.055020092228732935 microseconds with error -9.637127193804705%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10000"
+UI Main calls sendMessage("Estimated time on input 10000 is 0.07336012297164393 microseconds.")
+UI Main calls sendMessage("fib(10000) = Infinity in 0.06591959174948975 microseconds with error 11.287283529348887%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100000"
+UI Main calls sendMessage("Estimated time on input 100000 is 0.08239948968686218 microseconds.")
+UI Main calls sendMessage("fib(100000) = Infinity in 0.07415343225098502 microseconds with error 11.120264006077255%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 3
+doExperiments prog03.ConstantFib@6ff3c5b5
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("fib(100) = 3.542248481792631E20 in 0.32935790943198034 microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time on input 100 is 0.32935790943198034 microseconds.")
+UI Main calls sendMessage("fib(100) = 3.542248481792631E20 in 0.3038286658147622 microseconds with error 8.402513156142671%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time on input 100 is 0.3038286658147622 microseconds.")
+UI Main calls sendMessage("fib(100) = 3.542248481792631E20 in 0.30350875139700406 microseconds with error 0.10540533552512779%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "1000"
+UI Main calls sendMessage("Estimated time on input 1000 is 0.30350875139700406 microseconds.")
+UI Main calls sendMessage("fib(1000) = 4.3466557686938915E208 in 0.30335561521789023 microseconds with error 0.0504807465007168%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10000"
+UI Main calls sendMessage("Estimated time on input 10000 is 0.30335561521789023 microseconds.")
+UI Main calls sendMessage("fib(10000) = Infinity in 0.22636503806695704 microseconds with error 34.01169094326305%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100000"
+UI Main calls sendMessage("Estimated time on input 100000 is 0.22636503806695704 microseconds.")
+UI Main calls sendMessage("fib(100000) = Infinity in 0.2263643132469711 microseconds with error 3.202006427386602E-4%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 4
+doExperiments prog03.MysteryFib@4b1210ee
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("fib(100) = 3.54224848179262E20 in 1.0567195252497443 microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time on input 100 is 1.0567195252497443 microseconds.")
+UI Main calls sendMessage("fib(100) = 3.54224848179262E20 in 0.5100916256627952 microseconds with error 107.16268844380262%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time on input 100 is 0.5100916256627952 microseconds.")
+UI Main calls sendMessage("fib(100) = 3.54224848179262E20 in 0.4972500531396254 microseconds with error 2.5825180796036955%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "200"
+UI Main calls sendMessage("Estimated time on input 200 is 0.9945001062792508 microseconds.")
+UI Main calls sendMessage("fib(200) = 2.8057117299251016E41 in 0.9824664314657293 microseconds with error 1.2248433562832857%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "500"
+UI Main calls sendMessage("Estimated time on input 500 is 2.4561660786643236 microseconds.")
+UI Main calls sendMessage("fib(500) = 1.394232245616977E104 in 2.38331808099082 microseconds with error 3.0565789037784876%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "1000"
+UI Main calls sendMessage("Estimated time on input 1000 is 4.76663616198164 microseconds.")
+UI Main calls sendMessage("fib(1000) = 4.346655768693743E208 in 4.74084525638787 microseconds with error 0.5440149213691069%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 0
+doExperiments prog03.ExponentialFib@4d7e1886
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10"
+UI Main calls sendMessage("fib(10) = 55.0 in 0.1915991652686483 microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "20"
+UI Main calls sendMessage("Estimated time on input 20 is 23.565139508277024 microseconds.")
+UI Main calls sendMessage("fib(20) = 6765.0 in 21.57012072966862 microseconds with error 9.248992175849791%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "30"
+UI Main calls sendMessage("Estimated time on input 30 is 2652.9494713210725 microseconds.")
+UI Main calls sendMessage("fib(30) = 832040.0 in 2647.673676470587 microseconds with error 0.19926152143938736%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "40"
+UI Main calls sendMessage("Estimated time on input 40 is 325642.3349806292 microseconds.")
+UI Main calls sendMessage("fib(40) = 1.02334155E8 in 325336.5416666667 microseconds with error 0.09399291957674817%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time on input 100 is 1.12613708569774541E18 microseconds.")
+UI Main calls sendMessage("Estimated time is more than an hour.
+I will ask you if you really want to run it.")
+UI Main calls getCommand with choices
+UI 0:yes
+UI 1:no
+UI getCommand returns 1
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 5

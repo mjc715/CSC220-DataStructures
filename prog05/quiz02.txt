@@ -1,0 +1,114 @@
+DONE 5.5/10
+0. Assuming you use binary search, what is the largest number of pages you have
+   to look at in order to look up a word in an alphabetical dictionary with
+   1,000 pages?  With 1,000,000 pages?  With 1,000,000,000 pages?
+
+10,20,30
+
+CORRECT
+
+
+1. How many numbers can YOUR computer (the one you use to do your homework) add
+   up in one millisecond (1/1000 second)?  If you don't remember the exact speed
+   of your computer, take a guess.
+
+
+20,400,000
+
+
+CORRECT
+
+
+2. Using ui.getInfo(prompt) and ui.sendMessage(message), write code that gets a name
+   from the user and sends a message "Hello [name]" (say hello to the name) or
+   "Blank names are not allowed" if the user gives you a blank name or does nothing
+   if the user clicks CANCEL.
+
+
+
+name = ui.getInfo("What is your name?");
+if (name == null) {
+	ui.sendMessage("Blank names are not allowed");
+	break;
+}
+if (name.equals("")) {
+	ui.sendMessage("Blank names are not allowed");
+	break;
+}
+ui.sendMessage("Hello " + name);
+
+
+
+CORRECT 4/4
+
+
+
+
+3. If a class implements an interface, does it need to have a public method with
+   the same name and parameters for EVERY method in the interface?  Can the
+   class have methods OTHER than those in the interface it implements?  (Hint:
+   ArrayBasedPD.)
+
+
+Yes. Yes.
+
+CORRECT
+
+4. If name1="Victor and name2="Vincent", then name1.compareTo(name2) is -11
+   because 'c' comes 11 letters before 'n'.  What is it if name1="Jean" and
+   name2="Jane"?
+
+3
+
+WRONG, 4
+
+
+
+You are testing your homework, but you have not implemented find yet, so the
+directory will not yet be in alphabetical order.  You look at the contents of
+theDirectory using the debugger.  What you see is below.  Show the result of a
+single operation described in 5, 6, 7, or 8.  Each question is INDEPENDENT and
+refers to the original theDirectory below.  Each time pretend that is the ONLY
+OPERATION you do.
+
+  theDirectory:  Jay 1, Bob 8, Ian 2, Ann 3, Eve 6, null, null
+
+
+5. Result of ArrayBasedPD.remove(1).  (Remember, [1] is Bob!!)
+
+Jay 1, Eve 6, Ian 2, Ann 3, Eve 6, null
+
+INCORRECT 1/2 : 2 nulls
+
+6. Result of SortedPD.remove(1).
+
+Jay 1, Ian 2, Ann 3, Eve 6, null, null
+
+INCORRECT 1/2: 2 Eves
+
+7. Result of ArrayBasedPD.add(1, new DirectoryEntry("Zoe", 7)).  (Only change two locations!)
+
+Jay 1, Zoe 7, Ian 2, Ann 3, Eve 6, null null, Ian 2
+
+INCORRECT
+
+8. Result of SortedPD.add(1, new DirectoryEntry("Zoe", 7)).
+
+
+Jay 1, Zoe 7, Bob 8, Ian 2, Ann 3, Eve 6, null, null
+
+INCORRECT 1/2: one null
+
+9. What is the name of the web directory that contains quizzes and solutions?
+
+http://www.cs.miami.edu/home/vjm/csc220/???
+
+
+INCORRECT: tryagain
+
+
+
+
+
+
+

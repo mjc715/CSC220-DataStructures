@@ -1,0 +1,56 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+Jumble using SkipMap
+
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+&c sorted is &c
+Binalonen sorted is Baeilnnno
+Damascene sorted is Daaceemns
+Glynne sorted is Gelnny
+Khondi sorted is Kdhino
+Monarchian sorted is Maachinnor
+Pro-american sorted is -Paaceimnorr
+Stimson sorted is Simnost
+Yunnanese sorted is Yaeennnsu
+almaciga sorted is aaacgilm
+arcticwards sorted is aaccdirrstw
+batster sorted is aberstt
+border sorted is bdeorr
+carboxylase sorted is aabcelorsxy
+cirrhus sorted is chirrsu
+controlled sorted is cdellnoort
+czech sorted is ccehz
+digestion sorted is degiinost
+dysthymia sorted is adhimstyy
+estuarine sorted is aeeinrstu
+fistnotes sorted is efinosstt
+garottes sorted is aegorstt
+gyneolater sorted is aeeglnorty
+homeopathy sorted is aehhmoopty
+incommiscible sorted is bcceiiilmmnos
+jaildom sorted is adijlmo
+leda sorted is adel
+manifests sorted is aefimnsst
+misinstruction sorted is ciiimnnorssttu
+nephrogenic sorted is ceeghinnopr
+nonuniversal sorted is aeilnnnorsuv
+outshoulder sorted is dehloorstuu
+particularising sorted is aacgiiilnprrstu
+pinic sorted is ciinp
+precynical sorted is acceilnpry
+pudgily sorted is dgilpuy
+reconcentration sorted is acceeinnnoorrtt
+riddled sorted is dddeilr
+scrimshanker sorted is acehikmnrrss
+shrinks sorted is hiknrss
+spatha sorted is aahpst
+subaffluent sorted is abefflnstuu
+tactions sorted is acinostt
+tinemen sorted is eeimnnt
+twelve-spotted sorted is -deeelopstttvw
+unexterminated sorted is adeeeimnnrttux
+unspruced sorted is cdenprsuu
+vomtoria sorted is aimoortv
+wrayful sorted is aflruwy
+
+SCORE: 20/20

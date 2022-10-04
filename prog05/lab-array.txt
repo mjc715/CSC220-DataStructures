@@ -1,0 +1,33 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+size() = 0
+peek() = null
+poll() = null
+size() = 0
+offer(Mary)
+size() = 1
+peek() = Mary
+poll() = Mary
+size() = 0
+offer(had)
+offer(a)
+peek() = had
+poll() = had
+peek() = a
+poll() = a
+offer(little)
+offer(lamb)
+offer(its)
+offer(fleece)
+offer(was)
+peek() = little
+poll() = little
+peek() = lamb
+poll() = lamb
+peek() = its
+poll() = its
+peek() = fleece
+poll() = fleece
+peek() = was
+poll() = was
+
+SCORE: 15/15

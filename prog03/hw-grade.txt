@@ -1,0 +1,237 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 0
+doExperiments prog03.ExponentialFib@5c647e05
+UI Main calls getInfo("Enter n")
+UI getInfo returns ""
+UI Main calls sendMessage("Must be a number. Try again.")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "abc"
+UI Main calls sendMessage("Must be a number. Try again.")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "-10"
+UI Main calls sendMessage("Number must be positive. Try again.")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10"
+UI Main calls sendMessage("Fibn for n = 10 is 55.0, done in 0.17588477260743424microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10"
+UI Main calls sendMessage("Estimated time is 0.17588477260743424 microseconds")
+UI Main calls sendMessage("Fibn for n = 10 is 55.0, done in 0.16943852450517688 microseconds. Percent error is -3.6650404731994914%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10"
+UI Main calls sendMessage("Estimated time is 0.16943852450517688 microseconds")
+UI Main calls sendMessage("Fibn for n = 10 is 55.0, done in 0.1746393565453486 microseconds. Percent error is 3.0694507375817084%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "20"
+UI Main calls sendMessage("Estimated time is 21.479220929050058 microseconds")
+UI Main calls sendMessage("Fibn for n = 20 is 6765.0, done in 19.248680527887725 microseconds. Percent error is -10.384642946456164%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "30"
+UI Main calls sendMessage("Estimated time is 2367.431201247267 microseconds")
+UI Main calls sendMessage("Fibn for n = 30 is 832040.0, done in 2356.4291009852222 microseconds. Percent error is -0.4647273490460161%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "40"
+UI Main calls sendMessage("Estimated time is 289821.6201945373 microseconds")
+UI Main calls sendMessage("Fibn for n = 40 is 1.02334155E8, done in 289582.6666666667 microseconds. Percent error is -0.0824484825218336%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 1
+doExperiments prog03.LinearFib@1d44bcfa
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Fibn for n = 100 is 5.731478440138172E20, done in 0.04140223249986883microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time is 0.04140223249986883 microseconds")
+UI Main calls sendMessage("Fibn for n = 100 is 5.731478440138172E20, done in 0.036845485033999856 microseconds. Percent error is -11.00604288883072%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time is 0.036845485033999856 microseconds")
+UI Main calls sendMessage("Fibn for n = 100 is 5.731478440138172E20, done in 0.0367822499773463 microseconds. Percent error is -0.17162226686718138%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "200"
+UI Main calls sendMessage("Estimated time is 0.0735644999546926 microseconds")
+UI Main calls sendMessage("Fibn for n = 200 is 4.53973694165308E41, done in 0.1113678363579965 microseconds. Percent error is 51.38801517931405%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "400"
+UI Main calls sendMessage("Estimated time is 0.222735672715993 microseconds")
+UI Main calls sendMessage("Fibn for n = 400 is 2.848122981084893E83, done in 0.29976037506547926 microseconds. Percent error is 34.58121521813855%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "800"
+UI Main calls sendMessage("Estimated time is 0.5995207501309585 microseconds")
+UI Main calls sendMessage("Fibn for n = 800 is 1.1210238130165696E167, done in 0.6546551874130287 microseconds. Percent error is 9.196418517628747%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 2
+doExperiments prog03.LogFib@5e481248
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Fibn for n = 100 is 3.5422484817926226E20, done in 0.039021887535208404microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time is 0.039021887535208404 microseconds")
+UI Main calls sendMessage("Fibn for n = 100 is 3.5422484817926226E20, done in 0.03496727905472901 microseconds. Percent error is -10.390600600293947%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time is 0.03496727905472901 microseconds")
+UI Main calls sendMessage("Fibn for n = 100 is 3.5422484817926226E20, done in 0.033459100255452116 microseconds. Percent error is -4.313114546077116%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "1000"
+UI Main calls sendMessage("Estimated time is 0.050188650383178164 microseconds")
+UI Main calls sendMessage("Fibn for n = 1000 is 4.3466557686937765E208, done in 0.05511903529002159 microseconds. Percent error is 9.823704899815258%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10000"
+UI Main calls sendMessage("Estimated time is 0.07349204705336213 microseconds")
+UI Main calls sendMessage("Fibn for n = 10000 is Infinity, done in 0.06575773062017394 microseconds. Percent error is -10.524018235023913%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100000"
+UI Main calls sendMessage("Estimated time is 0.08219716327521742 microseconds")
+UI Main calls sendMessage("Fibn for n = 100000 is Infinity, done in 0.0745182397467306 microseconds. Percent error is -9.342078512826287%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 3
+doExperiments prog03.ConstantFib@63947c6b
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Fibn for n = 100 is 3.542248481792631E20, done in 0.33232403581267045microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time is 0.33232403581267045 microseconds")
+UI Main calls sendMessage("Fibn for n = 100 is 3.542248481792631E20, done in 0.30329375500522243 microseconds. Percent error is -8.735534502178547%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time is 0.30329375500522243 microseconds")
+UI Main calls sendMessage("Fibn for n = 100 is 3.542248481792631E20, done in 0.3034549429988022 microseconds. Percent error is 0.053145833344641596%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "1000"
+UI Main calls sendMessage("Estimated time is 0.3034549429988022 microseconds")
+UI Main calls sendMessage("Fibn for n = 1000 is 4.3466557686938915E208, done in 0.30348743574694015 microseconds. Percent error is 0.010707602195184483%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10000"
+UI Main calls sendMessage("Estimated time is 0.30348743574694015 microseconds")
+UI Main calls sendMessage("Fibn for n = 10000 is Infinity, done in 0.2262554764711695 microseconds. Percent error is -25.448157049957647%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100000"
+UI Main calls sendMessage("Estimated time is 0.2262554764711695 microseconds")
+UI Main calls sendMessage("Fibn for n = 100000 is Infinity, done in 0.22604203698484804 microseconds. Percent error is -0.09433561107576659%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 4
+doExperiments prog03.MysteryFib@355da254
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Fibn for n = 100 is 3.54224848179262E20, done in 0.9790440768648808microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time is 0.9790440768648809 microseconds")
+UI Main calls sendMessage("Fibn for n = 100 is 3.54224848179262E20, done in 0.5073631431812949 microseconds. Percent error is -48.17770157948499%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time is 0.5073631431812949 microseconds")
+UI Main calls sendMessage("Fibn for n = 100 is 3.54224848179262E20, done in 0.5013159175159417 microseconds. Percent error is -1.191892975795517%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "200"
+UI Main calls sendMessage("Estimated time is 1.0026318350318835 microseconds")
+UI Main calls sendMessage("Fibn for n = 200 is 2.8057117299251016E41, done in 0.9807979611208882 microseconds. Percent error is -2.177656159331996%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "500"
+UI Main calls sendMessage("Estimated time is 2.4519949028022205 microseconds")
+UI Main calls sendMessage("Fibn for n = 500 is 1.394232245616977E104, done in 2.42325315975443 microseconds. Percent error is -1.1721779280594558%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "1000"
+UI Main calls sendMessage("Estimated time is 4.84650631950886 microseconds")
+UI Main calls sendMessage("Fibn for n = 1000 is 4.346655768693743E208, done in 4.7962351368446425 microseconds. Percent error is -1.0372664214190463%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 0
+doExperiments prog03.ExponentialFib@4dc63996
+UI Main calls getInfo("Enter n")
+UI getInfo returns "10"
+UI Main calls sendMessage("Fibn for n = 10 is 55.0, done in 0.1926807398760912microseconds")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "20"
+UI Main calls sendMessage("Estimated time is 23.69816439112171 microseconds")
+UI Main calls sendMessage("Fibn for n = 20 is 6765.0, done in 21.55085623925678 microseconds. Percent error is -9.061073745734495%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "30"
+UI Main calls sendMessage("Estimated time is 2650.580095632643 microseconds")
+UI Main calls sendMessage("Fibn for n = 30 is 832040.0, done in 2649.3284560000006 microseconds. Percent error is -0.04722134730826033%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "40"
+UI Main calls sendMessage("Estimated time is 325845.85940836556 microseconds")
+UI Main calls sendMessage("Fibn for n = 40 is 1.02334155E8, done in 323715.98600000003 microseconds. Percent error is -0.6536444600624095%")
+UI Main calls getInfo("Enter n")
+UI getInfo returns "100"
+UI Main calls sendMessage("Estimated time is over an hour, you will be asked if you are sure you want to run")
+UI Main calls getCommand with choices
+UI 0:Yes
+UI 1:No
+UI getCommand returns 1
+UI Main calls getInfo("Enter n")
+UI getInfo returns null
+UI Main calls getCommand with choices
+UI 0:ExponentialFib
+UI 1:LinearFib
+UI 2:LogFib
+UI 3:ConstantFib
+UI 4:MysteryFib
+UI 5:EXIT
+UI getCommand returns 5
+
+
+getInteger:
+
+percent error calculation:
+
+accurate prediction:
+
+ask before running for an hour:
+
+break too soon:
+
+MysteryFib O:
+
+
+SCORE: 60

@@ -1,0 +1,98 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+
+Testing ArrayQueue
+Note: prog05/TestArrayQueue.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+theElements: null null null
+first=0 size=0
+Iterator:
+poll()
+returns null
+theElements: null null null
+first=0 size=0
+Iterator:
+CORRECT
+
+theElements: bob null null
+first=0 size=0
+Iterator: bob
+poll()
+returns null
+theElements: bob null null
+first=0 size=0
+Iterator: bob
+INCORRECT
+
+theElements: bob null null
+first=0 size=1
+Iterator: bob
+poll()
+returns bob
+theElements: null null null
+first=1 size=0
+Iterator:
+CORRECT
+
+theElements: bob ann eve
+first=2 size=3
+Iterator: eve
+poll()
+returns eve
+theElements: bob ann null
+first=0 size=2
+Iterator: bob ann
+INCORRECT
+
+theElements: bob ann eve
+first=0 size=2
+Iterator: bob ann eve
+offer(vic)
+returns true
+theElements: bob ann vic
+first=0 size=3
+Iterator: bob ann vic
+INCORRECT
+
+theElements: bob ann eve
+first=2 size=2
+Iterator: eve
+offer(vic)
+returns true
+theElements: bob vic eve
+first=2 size=3
+Iterator: eve
+INCORRECT
+
+theElements: bob ann eve
+first=0 size=3
+Iterator: bob ann eve
+offer(vic)
+returns true
+theElements: bob ann eve vic null null
+first=0 size=4
+Iterator: bob ann eve vic
+CORRECT
+
+theElements: bob ann eve
+first=1 size=3
+Iterator: ann eve
+offer(vic)
+returns true
+theElements: ann eve bob vic null null
+first=0 size=4
+Iterator: ann eve bob vic
+INCORRECT
+
+theElements: bob ann eve
+first=2 size=3
+Iterator: eve
+offer(vic)
+returns true
+theElements: eve bob ann vic null null
+first=0 size=4
+Iterator: eve bob ann vic
+INCORRECT
+
+FAIL
+
+SCORE: 0/15

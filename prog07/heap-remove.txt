@@ -1,0 +1,193 @@
+offer 3
+3
+
+
+remove 3
+
+
+
+offer 3
+3
+
+
+offer 1
+ 1 
+3  
+
+
+remove 1
+3
+
+
+offer 1
+ 1 
+3  
+
+
+offer 4
+ 1 
+3 4
+
+
+remove 4
+ 1 
+3  
+
+
+offer 4
+ 1 
+3 4
+
+
+offer 1
+   1   
+ 1   4 
+3      
+
+
+remove 1
+ 1 
+3 4
+
+
+offer 1
+   1   
+ 1   4 
+3      
+
+
+offer 5
+   1   
+ 1   4 
+3 5    
+
+
+remove 5
+   1   
+ 1   4 
+3      
+
+
+offer 5
+   1   
+ 1   4 
+3 5    
+
+
+offer 9
+   1   
+ 1   4 
+3 5 9  
+
+
+remove 9
+   1   
+ 1   4 
+3 5    
+
+
+offer 9
+   1   
+ 1   4 
+3 5 9  
+
+
+offer 2
+   1   
+ 1   2 
+3 5 9 4
+
+
+remove 2
+   1   
+ 1   4 
+3 5 9  
+
+
+offer 2
+   1   
+ 1   2 
+3 5 9 4
+
+
+offer 6
+       1       
+   1       2   
+ 3   5   9   4 
+6              
+
+
+remove 6
+   1   
+ 1   2 
+3 5 9 4
+
+
+offer 6
+       1       
+   1       2   
+ 3   5   9   4 
+6              
+
+
+poll returns 1
+   1   
+ 3   2 
+6 5 9 4
+
+
+poll returns 1
+   2   
+ 3   4 
+6 5 9  
+
+
+poll returns 2
+   3   
+ 5   4 
+6 9    
+
+
+poll returns 3
+   4   
+ 5   9 
+6      
+
+
+poll returns 4
+ 5 
+6 9
+
+
+poll returns 5
+ 6 
+9  
+
+
+poll returns 6
+9
+
+
+poll returns 9
+
+
+
+offer 1 2 7 3 4 8 9 5
+       1       
+   2       7   
+ 3   4   8   9 
+5              
+
+
+remove 8
+   1   
+ 2   5 
+3 4 7 9
+
+
+remove 1
+   2   
+ 3   5 
+9 4 7  
+
+

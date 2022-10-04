@@ -1,0 +1,147 @@
+DONE	8.75/10
++1   0. LinkedQueue<E> uses a linked list with the following Node class.  It has Node
+   variables top and bottom and int variable size.  Implement offer.
+
+	class Node {
+		E element;
+		Node next;
+		Node (E element) { this.element = element; this.next = null; }
+	}
+
+  	boolean offer (E element) {
+
+		Node newNode = new Node<E>(element);
+		if (size == 0) {
+			top = newNode;
+			bottom = top;
+			++size;
+		} else {
+			bottom.next = newNode;
+			bottom = newNode;
+			++size;
+		}
+		
+
+
+
+
++1.5   1,2. Write a method INSIDE LinkedQueue<E> that prints out all the elements from top
+   to bottom on separate lines.
+
+   private void print () {
+   
+	for (	Node n ; n = top; n = n.next) ***Node n = top; n!= null
+
+
+		System.out.println(n.element);
+
+   }
+
+
++1   3. ArrayQueue<E> uses an E[] array theElements and int variables first and size.
+   Implement ArrayQueue<E< poll.  Don't forget the empty case.
+
+	E poll () {
+
+		if (isEmpty()) {
+			return null;
+		}
+		E obj = theElements[first];
+		++first;
+		--size;
+		if(first == theElements.length) {
+			first = 0;
+		}
+		return obj;
+	}
+
+
+
+
+
+
+
+
+
+
+
++2    4,5. Write a method INSIDE ArrayQueue<E> that prints out all the elements from first
+   onwards.
+
+   private void print () {
+   
+	for (int offset = 0; offset < size; ++offset	  ) {
+		
+
+
+		System.out.println(theElements[(first + offset) % theElements.length];				);
+
+   }
+
++0.75   6. Suppose ArrayQueue<String> has an array theElements of length 5 with the
+   following contents:
+
+	null, "had", "a", "little", "lamb"
+
+   Suppose first==1 and size==4.  (Zero based indexing!!!)
+
+   After offer("fleece"), what are the contents of the array and the values of
+   first and size?  Would your answer be different if the null had been "Mary"?
+	Array: "fleece" "had" "a" "little" "lamb"
+	first = 1; size = 5;
+
+
+yes   **** Wouldn't change bc size stays the same
+
+
+
+
+
+
+
++1   7. Continuing from #6 (disregarding my question about "Mary"), after offer("white),
+   what are the contents of theElements and the values of first and size?
+
+	
+	Array: "had" "a" "little" "lamb" "fleece" "white" null null null null
+	first = 0
+	size = 5
+
+
+
+
+
++0.5   8. Write a method that takes a queue as input and returns a String that is the
+   contents of the queue separated by spaces.  There can be an extra space at the end.
+
+	void queueToString (Queue<String> queue) {
+		String s = "";
+
+
+		for (String s : queue) { *** For string element (have 2 strings)
+			s = s + " ";
+		}
+
+
+
+                return s;
+	}
+
+
++1.0 9. The methods of AbstractQueue<E> work by calling the methods that YOU WROTE
+   yesterday.  How can AbstractQueue<E> implement remove() by calling the poll() and
+   size() you implemented?  Remember, remove() should throw NoSuchElementException
+   if there is no element to remove.
+
+	E remove () {
+		if (size = 0) {
+			throw new NoSuchElementException;
+		}
+		return poll();
+	}
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+compiling TestLinkedMap
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+running TestLinkedMap
+testing find
+testing add
+
+SCORE: 40/40

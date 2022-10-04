@@ -1,0 +1,10 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+TestLinkedMap with testIterator
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+testing find
+testing add
+testing remove
+testing iterator
+
+SCORE: 10/10

@@ -1,0 +1,9 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+compare(said, rain) = 2
+compare(rain, said) = -2
+Setting distance from rain to start to 3.
+compare(said, rain) = -1
+compare(rain, said) = 1
+success
+
+SCORE: 20/20

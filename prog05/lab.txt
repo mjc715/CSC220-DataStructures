@@ -1,0 +1,154 @@
+0. Run prog05/MaintainQueue and make sure you know how it works.
+   The "position" button won't work until you do step #1.
+   Add a few people, peek, remove, etc.
+   What happens when you peek at an empty queue?
+
+
+1. Implement the "position" button (case 4).  Use the logic given and
+   the new for-loop you learned about in lecture.  Test.
+   
+
+2. In ArrayQueue.java, read and understand offer and peek.  This means
+   that you are ready to write either of them on the quiz.  Implement
+   poll.  What should be the new values of first and size?
+
+   Switch MaintainQueue to using ArrayQueue.  Make sure it is working.
+   It won't print the list (and position won't work) because the
+   special loop won't work for ArrayQueue until you implement
+   iterator.  Also, because you don't reallocate and the capacity is
+   five, if you add six people, the sixth person will become first in
+   line!
+
+
+3. Finish implementing ArrayQueue toString.  It should loop offset
+   from 0 to size-1.  What is the index of the element with that
+   offset from first?  (Hint: look at offer.)  Test MaintainQueue.
+
+
+4. Implement the (internal) Iter class that implements Iterator<E>.
+   Think of it as the for-loop in #3 "deconstructed".
+
+   a. Give the Iter class an offset variable.  What is the initial
+      value?
+
+   b. What condition on offset tells us that hasNext should return
+      true?  (Look at the for-loop in #3.)
+
+   c. next() increments offset but also returns the element at the
+      current offset.
+
+   d. Test MaintainQueue again.  The special for-loop and hence the
+      "position" button should work.
+
+   e. Now rename ArrayQueue toString to toStringX.  This will switch
+      back to the toString in the parent class AbstractQueue which
+      also uses the special for-loop.  The format of the queue should
+      now have [] and ,
+
+
+5. peek in LinkedQueue is just the same as LinkedStack.  poll is just
+   the same as pop except you should set bottom to null if top gets set
+   to null, and you should decrement size.
+
+   If top is null, then offer sets both top and bottom to the same new
+   Node.  Otherwise, it adds a new Node at the bottom.  That takes two
+   lines, one to add a new Node as the next one below the current
+   bottom, and another to set bottom to the new bottom.  Don't forget
+   to increment size.
+
+   Switch MaintainQueue to LinkedStack and test.  Printing and
+   position won't work.
+
+
+6. toString uses an old for-loop but in an unusual way.  We want to
+   iterate a Node variable n (not an int variable!) over all the nodes.
+   What is the initial value?
+   What condition tells us to keep going?  n!=bottom ?
+   How do we set n to point to the next Node down?
+   These are the three parts of the for-loop.
+   The guts of the for-loop is easier than for an ArrayQueue.
+   Test.
+
+
+7. Implement Iter by deconstructing the for-loop in #6 just like you
+   did in #4.
+
+
+8. Run prog05.jar (double-click on it).  Play the game as a human.
+   Can you get from lead to gold?  pass to fail?  trash to money?
+   Does the computer get there in fewer words?
+
+   Create a class Game.  Its constructor should take a
+   UserInterface and store it in a class variable.
+
+public class Game { // Game class
+  UserInterface ui; // class variable
+
+  Game (UserInterface ui) { // constructor that takes a UserInterface
+    this.ui = ui; // and stores it in a class variable
+  }
+
+   In its main method, create a new Game with a new GUI and store
+   the Game in game.  Ask the user for a starting word and a
+   target word.  Ask if the human or the computer should play:
+
+    String[] commands = { "Human plays.", "Computer plays." };
+
+   Call game.play or game.solve with the starting word and the target
+   word.  (solve will empty for now.)
+
+   In play, do the following forever (until the return occurs).  Tell
+   the user the current word (the start) and the target word.  Ask for
+   the next word.  Set the start word variable to that next word.  If
+   it equals the target, tell the user ``You win!'' and return.
+   Otherwise keep looping.  Test.
+
+
+HOMEWORK
+
+9. Add reallocate and a call to it to ArrayQueue.  Test ArrayQueue and
+   LinkedQueue using TestArrayQueue and TestLinkedQueue.
+
+
+10. In Game, create a static boolean method oneLetterDifferent which
+   takes two String as input and returns true if they have the same
+   length and differ in exactly one character.
+
+   Modify play so that it calls oneLetterDifferent.  It should warn
+   the user and NOT change the current (start) word variable if the
+   word that the user suggests is not one letter away from the current
+   start word.  Test.
+
+
+11. In Game main, just after creating the new Game in main, ask the
+   user for the name of a word file and call game.loadWords(filename).
+   Add a private internal Node class to Game with a String word and an
+   Node next.  Add a List<Node> wordEntries to Game initialized to an
+   ArrayList<Node>.  For each word in the word file, loadWords should
+   read in the word, create a Node from it, and add this Node to
+   wordEntries.
+
+   Write a find method that takes a String word and finds that word in
+   wordEntries.  It should return the node for that word or null if
+   not there.  Modify play so it also refuses a word not in words.
+   Test using the words file called words in the prog05 directory:
+   move it to the csc220 IntelliJ project folder (IdeaProjects/csc220).
+
+
+11. Now to implement Game.solve.  Inside solve, create a Queue of
+   Node.  Find the node belonging to the start word and put it into
+   the queue.  Also save it in a variable since you will need to refer
+   to it again later.
+
+   While the queue is not empty, remove a node, and call it theNode.
+   Go through the list wordEntries and look for entries which aren't
+   the start node, have next equal to null, and are one letter
+   different from theNode.  For each one you find, call it nextNode.
+   Set nextNode next to theNode and add nextNode to the queue.
+
+   If the word in nextNode is the target, then report success.  To get
+   the solution in reverse order, follow next back to the start
+   node.  Display the solution in forward order.
+
+   Test using TestGame.
+

@@ -1,0 +1,28 @@
+          case 4:
+            name = ui.getInfo("Enter customer name");
+            if (name == null || name.length() == 0)
+              break;
+            countAhead = 0;
+            foundAhead = -1;
+            for (String s : customers) {
+              if (s.equals(name)) {
+                foundAhead = countAhead;
+              }
+              ++countAhead;
+            }
+
+            // EXERCISE 1
+            // for each String s in the customers queue
+            //   if s equals name
+            //     set foundAhead = countAhead
+            //   increment countAhead
+
+
+            if (foundAhead == -1)
+              ui.sendMessage(name + " is not in queue");
+            else
+              ui.sendMessage("The number of customers ahead of " +
+                      name + " is " + foundAhead);
+            break;
+
+SCORE: 5/5

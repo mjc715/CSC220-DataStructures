@@ -1,0 +1,75 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+
+Testing LinkedQueue
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+testing peek() on empty queue
+
+testing poll() on empty queue
+
+ bottom = null, size = 0
+Iterator:
+offer(bob)
+returns true
+bob  bottom = bob, size = 1
+Iterator: bob
+
+bob  bottom = bob, size = 1
+Iterator: bob
+peek()
+returns bob
+bob  bottom = bob, size = 1
+Iterator: bob
+
+bob  bottom = bob, size = 1
+Iterator: bob
+poll()
+returns bob
+ bottom = null, size = 0
+Iterator:
+end poll
+bob  bottom = bob, size = 1
+Iterator: bob
+offer(ann)
+returns true
+bob ann  bottom = ann, size = 2
+Iterator: bob ann
+
+bob ann  bottom = ann, size = 2
+Iterator: bob ann
+peek()
+returns bob
+bob ann  bottom = ann, size = 2
+Iterator: bob ann
+
+bob ann  bottom = ann, size = 2
+Iterator: bob ann
+poll()
+returns bob
+ann  bottom = ann, size = 1
+Iterator: ann
+end poll
+bob ann  bottom = ann, size = 2
+Iterator: bob ann
+offer(eve)
+returns true
+bob ann eve  bottom = eve, size = 3
+Iterator: bob ann eve
+
+bob ann eve  bottom = eve, size = 3
+Iterator: bob ann eve
+peek()
+returns bob
+bob ann eve  bottom = eve, size = 3
+Iterator: bob ann eve
+
+bob ann eve  bottom = eve, size = 3
+Iterator: bob ann eve
+poll()
+returns bob
+ann eve  bottom = eve, size = 2
+Iterator: ann eve
+end poll
+PASS
+
+SCORE: 10/10
