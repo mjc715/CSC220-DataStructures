@@ -1,6 +1,6 @@
 # CSC220-DataStructures
 
-This is a collection of code written by myself for CSC220 Data Structures and Algorithms.  
+This is a collection of code written by myself for CSC220 Data Structures and Algorithms taken in Spring 2021.  
   
 prog01: Introduction, working with different classes  
 prog02: Phone directory lab using array based methods for database  
