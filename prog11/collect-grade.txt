@@ -1,0 +1,34 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+indexing page 3(edu.miami.cs.www/home/vjm/csc220/google/mary.html)
+indexing page 7(edu.miami.cs.www/home/vjm/csc220/google/snow.html)
+indexing page 8(edu.miami.cs.www/home/vjm/csc220/google/jill.html)
+indexing page 11(edu.miami.cs.www/home/vjm/csc220/google/white.html)
+indexing page 14(edu.miami.cs.www/home/vjm/csc220/google/hill.html)
+indexing page 16(edu.miami.cs.www/home/vjm/csc220/google/water.html)
+indexing page 19(edu.miami.cs.www/home/vjm/csc220/google/lamb.html)
+indexing page 20(edu.miami.cs.www/home/vjm/csc220/google/jack.html)
+indexing word 3(hill)
+indexing word 7(fleece)
+indexing word 8(white)
+indexing word 11(jack)
+indexing word 14(lamb)
+indexing word 16(water)
+indexing page 23(edu.miami.cs.www/home/vjm/csc220/google/fleece.html)
+indexing page 27(edu.miami.cs.www/home/vjm/csc220/google/little.html)
+indexing word 19(snow)
+indexing word 20(jill)
+indexing word 23(mary)
+indexing word 27(little)
+map from URL to page index
+{edu.miami.cs.www/home/vjm/csc220/google/fleece.html=23, edu.miami.cs.www/home/vjm/csc220/google/hill.html=14, edu.miami.cs.www/home/vjm/csc220/google/jack.html=20, edu.miami.cs.www/home/vjm/csc220/google/jill.html=8, edu.miami.cs.www/home/vjm/csc220/google/lamb.html=19, edu.miami.cs.www/home/vjm/csc220/google/little.html=27, edu.miami.cs.www/home/vjm/csc220/google/mary.html=3, edu.miami.cs.www/home/vjm/csc220/google/snow.html=7, edu.miami.cs.www/home/vjm/csc220/google/water.html=16, edu.miami.cs.www/home/vjm/csc220/google/white.html=11}
+map from page index to page disk
+{3=3(edu.miami.cs.www/home/vjm/csc220/google/mary.html)[7, 8, 11, 14, 16, 19, 20][], 7=7(edu.miami.cs.www/home/vjm/csc220/google/snow.html)[23, 27][], 8=8(edu.miami.cs.www/home/vjm/csc220/google/jill.html)[][], 11=11(edu.miami.cs.www/home/vjm/csc220/google/white.html)[][], 14=14(edu.miami.cs.www/home/vjm/csc220/google/hill.html)[][], 16=16(edu.miami.cs.www/home/vjm/csc220/google/water.html)[][], 19=19(edu.miami.cs.www/home/vjm/csc220/google/lamb.html)[][], 20=20(edu.miami.cs.www/home/vjm/csc220/google/jack.html)[][], 23=23(edu.miami.cs.www/home/vjm/csc220/google/fleece.html)[][], 27=27(edu.miami.cs.www/home/vjm/csc220/google/little.html)[][]}
+map from word to word index
+{hill=3, white=8, snow=19, fleece=7, lamb=14, mary=23, water=16, jack=11, jill=20, little=27}
+map from word index to word file
+{3=[3, 8, 11, 14, 19, 23], 7=[3, 7, 8, 16, 19, 20, 23, 27], 8=[3, 7, 8, 19, 23, 27], 11=[3, 7, 11, 14, 16, 20, 23, 27], 14=[3, 7, 8, 11, 16, 19, 27], 16=[3, 7, 11, 14, 16, 19, 20, 27], 19=[7, 8, 11, 14, 16, 19, 20, 27], 20=[7, 8, 16, 19, 23], 23=[7, 8, 11, 14, 16, 19, 27], 27=[11, 20, 23]}
+4c4
+< {3=3(edu.miami.cs.www/home/vjm/csc220/google/mary.html)[7, 8, 11, 14, 16, 19, 20][], 7=7(edu.miami.cs.www/home/vjm/csc220/google/snow.html)[3, 8, 11, 14, 23, 27][], 8=8(edu.miami.cs.www/home/vjm/csc220/google/jill.html)[8, 11, 14, 16, 19, 23, 27][], 11=11(edu.miami.cs.www/home/vjm/csc220/google/white.html)[7, 8, 11, 14, 16, 20, 23, 27][], 14=14(edu.miami.cs.www/home/vjm/csc220/google/hill.html)[3, 7, 8, 14, 16, 19, 20, 23, 27][], 16=16(edu.miami.cs.www/home/vjm/csc220/google/water.html)[3, 7, 14, 16, 19, 27][], 19=19(edu.miami.cs.www/home/vjm/csc220/google/lamb.html)[3, 7, 8, 11, 14, 19, 20][], 20=20(edu.miami.cs.www/home/vjm/csc220/google/jack.html)[3, 7, 11, 14, 20, 27][], 23=23(edu.miami.cs.www/home/vjm/csc220/google/fleece.html)[3, 7, 14, 16, 19, 20, 27][], 27=27(edu.miami.cs.www/home/vjm/csc220/google/little.html)[3, 7, 8, 11, 14, 16, 20, 23][]}
+---
+> {3=3(edu.miami.cs.www/home/vjm/csc220/google/mary.html)[7, 8, 11, 14, 16, 19, 20][], 7=7(edu.miami.cs.www/home/vjm/csc220/google/snow.html)[23, 27][], 8=8(edu.miami.cs.www/home/vjm/csc220/google/jill.html)[][], 11=11(edu.miami.cs.www/home/vjm/csc220/google/white.html)[][], 14=14(edu.miami.cs.www/home/vjm/csc220/google/hill.html)[][], 16=16(edu.miami.cs.www/home/vjm/csc220/google/water.html)[][], 19=19(edu.miami.cs.www/home/vjm/csc220/google/lamb.html)[][], 20=20(edu.miami.cs.www/home/vjm/csc220/google/jack.html)[][], 23=23(edu.miami.cs.www/home/vjm/csc220/google/fleece.html)[][], 27=27(edu.miami.cs.www/home/vjm/csc220/google/little.html)[][]}
+SCORE: 75/100

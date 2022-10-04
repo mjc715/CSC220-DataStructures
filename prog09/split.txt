@@ -1,0 +1,81 @@
+sorted		key1		key2
+
+bdloootu	bgu
+^               ^
+
+bdloootu	bgu		
+ ^               ^
+
+bdloootu	bgu		d
+  ^              ^
+
+'l' comes after 'g'.  key1 is not valid.
+
+
+
+sorted		key1		key2
+
+bdloootu	btu
+^               ^
+
+bdloootu	btu		
+ ^               ^
+
+bdloootu	btu		d
+  ^              ^
+
+bdloootu	btu		dl
+   ^             ^
+
+bdloootu	btu		dlo
+    ^            ^
+
+bdloootu	btu		dloo
+     ^           ^
+
+bdloootu	btu		dlooo
+      ^          ^
+
+bdloootu	btu		dlooo
+       ^          ^
+
+bdloootu	btu		dlooo
+        ^          ^
+
+NO MATCH FOR "dlooo"
+
+
+
+sorted		key1		key2
+
+bdloootu	otu
+^               ^
+
+bdloootu	otu		b
+ ^              ^
+
+bdloootu	otu		bd
+  ^             ^
+
+bdloootu	otu		bdl
+   ^            ^
+
+bdloootu	otu		bdl
+    ^            ^
+
+bdloootu	otu		bdlo
+     ^           ^
+
+bdloootu	otu		bdloo
+      ^          ^
+
+bdloootu	otu		bdloo
+       ^          ^
+
+bdloootu	otu		bdloo
+        ^          ^
+
+"otu" matches [out, tou]
+"bdloo" matches [blood, boldo]
+
+

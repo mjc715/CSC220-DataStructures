@@ -1,0 +1,87 @@
+0. Go over mary.txt.  Ask questions about anything you do not
+   understand.  Be prepared to answer questions if you don't ask
+   questions!
+
+
+1. Install jsoup-1.8.3.jar:
+
+Open your installed IntelliJ IDEA Project and
+Go to the File > Project Structure
+Select Modules at the left panel and select the Dependencies tab.
+Select the + icon and select 1 JARs or Directories option.
+select your JAR file (in src/prog11)
+Click on the OK button
+
+   import org.jsoup.Jsoup;
+
+   BetterBrowser.java should not have a red jsoup now.
+
+
+2. Create a Goggle (not a trademark violation!) class which implements
+   SearchEngine.  Give it an empty collect and search method.  search
+   should return new String[0].  The file should compile, but
+   obviously it does nothing.
+
+
+3. Look at PageFile.java and Disk.java.  Ask
+   questions if you do not understand what they do.
+
+   Put a Disk<PageFile> variable pageDisk inside Goggle to store the
+   information about web pages.  Initialize pageDisk.
+
+   Put a Map<String,Long> variable urlToIndex into Goggle.  Initialize
+   to a TreeMap (stand-in for an external BTree).
+
+
+4. Write an indexPage method that takes the String url of the web page
+   as input and returns the index of its newly created page file.  It
+   gets the index of a new file from pageDisk, creates a new
+   PageFile, and stores the PageFile in pageDisk.  Then it tells the
+   Map urlToIndex to map url to that index and returns the index.
+
+
+5. In collect, create a queue of page indices.
+
+   For each starting URL, check if it has been indexed already (how?).
+   If not, index it using indexPage and put the new index into the queue.
+
+   Do the following while the queue is not empty:
+
+   Dequeue a page index.
+   Load its URL into the browser.
+   If it loads, get its list of URLs.
+
+   For each URL in that list that has not been indexed yet, index it
+   using indexPage and add its index to the queue.
+
+   Put a print statement inside your indexPage method.
+
+   Download Main.java and check that it pages in the same order as
+   mary.txt.
+
+
+HOMEWORK
+
+6. For each URL on the page, add its index to the set of indices for
+   the PageFile.  Test.
+
+
+7. Add a Disk<T> variable wordDisk to Goggle.  What is T?  (Check the
+   notes!)  Initialize it to a new Disk<T>.
+
+   Add a wordIndex variable to map a word to its index.  Initialize it
+   to a HashMap (because it DOES fit in RAM).
+
+
+8. Write the indexWord method.  What is the type of the "file" variable?
+
+
+9. For each word on the page (that was just dequeued), add the current
+   page index to its list (its "file").  Test.  This will not match
+   mary.txt because there will be duplicates.
+
+   Add code to avoid adding a page index if it is already at the end
+   of the list (because the word appeared earlier on that page).
+
+   Uncomment the two commented lines at the bottom of Main.java.  Now
+   it should match mary.txt.

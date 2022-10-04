@@ -1,0 +1,82 @@
+0. Add methods
+
+	void rankSlow ()
+	void rankFast ()
+
+   to your Goggle class.  Make them empty for now.
+
+
+1. To iterate over all the page files, use
+
+    for (PageFile file : pageDisk.values()) {
+
+   First, add 1.0 to each page file priority list.
+
+   Next for i = 1 to 19 (i < 20)
+
+     For each page file
+       Print it out.
+       Add 0.0 to its priority.
+
+     In a separate loop over the page files.
+       Figure out its fractional vote.
+       Add that vote to the last element of priority of each page it links to.
+
+3. Download a fresh copy of Main.java or just add
+
+    g.rankSlow();
+    System.out.println("page disk");
+    for (PageFile file : g.pageDisk.values()) {
+      System.out.println(file);
+      file.priority.clear();
+    }
+
+    g.rankFast();
+    System.out.println("page disk");
+    for (PageFile file : g.pageDisk.values())
+      System.out.println(file);
+
+
+  at the end of main.  The result should look like rank-slow.txt.
+
+
+HOMEWORK
+
+4. Add a Vote class to Goggle with a Long index and a double vote.
+
+   Make it implement Comparable<Vote>.
+
+   The compareTo method should return the result of comparing the indexes.
+
+
+5. Start by copying the contents of rankSlow into rankFast.
+
+   As before, print each page file, but this time, don't add 0.0 to its priority.
+
+   Create a List<Vote> votes using an ArrayList.
+
+   When iterating over file.indices, do NOT call pageDisk.get(index)
+   (very slow).  Instead, create a Vote with that index and the
+   fractional vote and add it the the list of votes.
+
+   Sort the list of votes:
+
+	Collections.sort(votes);
+
+   Of course, what we really should be doing is using external mergesort.
+
+   Create an Iterator<Vote> and initialize it to votes.iterator();
+   Use next() to get the first vote and save it.
+
+   For each page file
+     Set totalVote to zero.
+     While the vote has its index
+       add its fractionalVote to totalVote
+       and get the next Vote from the iterator
+
+   This will crash after the last element of votes, so you will have
+   to fix that.
+
+
+
+   

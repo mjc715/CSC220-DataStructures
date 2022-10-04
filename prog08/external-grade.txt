@@ -1,0 +1,28 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+1,21c1
+< a
+< alas
+< and
+< does
+< eels
+< full
+< function
+< hovercraft
+< i
+< is
+< like
+< madonna
+< my
+< not
+< of
+< of
+< plate
+< pork
+< spaghetti
+< the
+< would
+---
+> alikeandspaghettimadonnathefunctionmyfullofiwouldofplatealasporkdoesnothovercraftiseels
+\ No newline at end of file
+
+SCORE: 5/10

@@ -1,0 +1,59 @@
+1. Implement ArrayMap.find
+
+2. Finish implementing ArrayMap.add.  Run it to test.  (Remove won't work.)  Correct output in arraymap-add.txt.
+
+3. Finish implementing ArrayMap.remove.  Run it to test.  Correct output in arraymap-remove.txt.
+
+4. Look at Array2Map.containsKey and ask questions if you don't understand it.  Implement get.
+
+5. Finish implementing Array2Map.put.  Correct output in array2map-put.txt.
+
+6. Finish implementing BTree.put.  Correct output in btree-put.txt.
+
+
+HOMEWORK
+
+7. Copy Jumble.java to prog08 (change package to prog08 on the first line).  Test words and dict with BTree.
+
+8. Finish implementing Array2Map.remove.  Correct output in array2map-remove.txt.
+
+9. Finish implementing BTree.remove.  Correct output in btree-remove.txt.
+
+9. Add a test of remove to Jumble.java.
+
+
+10. Modify Jumble so that it keeps a list of words that match each
+   pattern: Map<String, List<String>>.  Test on "rdea".
+
+
+11. Add a second loop that prompts the user for a set of clue letters
+   and the length of the first pun word.  This loop should activate
+   when the user clicks cancel when asked for a word to unjumble.
+
+   a. Sort the letters (sortedLetters).
+
+   b. Declare key1index and initialize it to zero.  It is the index
+      of the current letter in key1.
+
+      For each key (key1) that has the right length:
+
+      i. Create an empty string key2.
+
+      ii. For each letter in sortedLetters, if
+            key1 is done (no more current letters),
+               add the letter to key2;
+            it matches the current letter in key1,
+               make the next letter in key1 the current letter;
+            if it comes after alphabetically the current letter in key1,
+               stop looking at this key1.
+          Otherwise, add that letter to key2.
+
+   c. If all the letters in key1 were found in letters and if key2 is
+      a valid key, display the lists for key1 and key2.
+
+   See split.txt for an example of this algorithm in action.
+
+   Test on the Jumble examples.  Use dict instead of words.
+    
+   See jumble.txt.
+

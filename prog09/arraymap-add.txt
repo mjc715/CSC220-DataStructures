@@ -1,0 +1,53 @@
+map = {}
+put("m", 7) = null
+map = {m=7}
+get("m") = 7
+put("m", 9) = 7
+map = {m=9}
+remove("m") = 9
+map = {m=9}
+remove("m") = 9
+map = {m=9}
+put("m", 2) = 9
+map = {m=2}
+put("g", 7) = null
+map = {g=7, m=2}
+get("g") = 7
+put("g", 9) = 7
+map = {g=9, m=2}
+remove("g") = 9
+map = {g=9, m=2}
+put("s", 8) = null
+map = {g=9, m=2, s=8}
+get("s") = 8
+put("s", 2) = 8
+map = {g=9, m=2, s=2}
+remove("s") = 2
+map = {g=9, m=2, s=2}
+remove("s") = 2
+map = {g=9, m=2, s=2}
+put("s", 0) = 2
+map = {g=9, m=2, s=0}
+put("b", 3) = null
+map = {b=3, g=9, m=2, s=0}
+get("b") = 3
+put("b", 9) = 3
+map = {b=9, g=9, m=2, s=0}
+remove("b") = 9
+map = {b=9, g=9, m=2, s=0}
+put("p", 2) = null
+map = {b=9, g=9, m=2, p=2, s=0}
+get("p") = 2
+put("p", 5) = 2
+map = {b=9, g=9, m=2, p=5, s=0}
+remove("p") = 5
+map = {b=9, g=9, m=2, p=5, s=0}
+put("w", 4) = null
+map = {b=9, g=9, m=2, p=5, s=0, w=4}
+get("w") = 4
+put("w", 7) = 4
+map = {b=9, g=9, m=2, p=5, s=0, w=7}
+remove("w") = 7
+map = {b=9, g=9, m=2, p=5, s=0, w=7}
+remove("w") = 7
+map = {b=9, g=9, m=2, p=5, s=0, w=7}

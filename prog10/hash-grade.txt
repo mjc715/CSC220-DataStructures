@@ -1,0 +1,268 @@
+"Castellucci,Michael James" <mjc715@miami.edu>
+Note: prog10/HashTable.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+put Brad 46 hash index 2 returns null
+{Brad=46}
+0:
+1:
+2: Brad 46
+3:
+4:
+
+put Hal 10 hash index 2 returns null
+{Hal=10, Brad=46}
+0:
+1:
+2: Hal 10 Brad 46
+3:
+4:
+
+put Brad 60 hash index 2 returns 46
+{Hal=10, Brad=60}
+0:
+1:
+2: Hal 10 Brad 60
+3:
+4:
+
+put Hal 24 hash index 2 returns 10
+{Hal=24, Brad=60}
+0:
+1:
+2: Hal 24 Brad 60
+3:
+4:
+
+put Kyle 6 hash index 0 returns null
+{Kyle=6, Hal=24, Brad=60}
+0: Kyle 6
+1:
+2: Hal 24 Brad 60
+3:
+4:
+
+put Lisa 43 hash index 3 returns null
+{Kyle=6, Hal=24, Brad=60, Lisa=43}
+0: Kyle 6
+1:
+2: Hal 24 Brad 60
+3: Lisa 43
+4:
+
+put Lynne 43 hash index 3 returns null
+{Kyle=6, Hal=24, Brad=60, Lynne=43, Lisa=43}
+0: Kyle 6
+1:
+2: Hal 24 Brad 60
+3: Lynne 43 Lisa 43
+4:
+
+hash code of Victor is -1732826265
+rehash 10
+put Victor 46 hash index 0 returns null
+{Lisa=43, Victor=46, Kyle=6, Brad=60, Hal=24, Lynne=43}
+0:
+1:
+2:
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60 Hal 24
+8: Lynne 43
+9:
+
+put Zoe 6 hash index 2 returns null
+{Zoe=6, Lisa=43, Victor=46, Kyle=6, Brad=60, Hal=24, Lynne=43}
+0:
+1:
+2: Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60 Hal 24
+8: Lynne 43
+9:
+
+put Zoran 76 hash index 2 returns null
+{Zoran=76, Zoe=6, Lisa=43, Victor=46, Kyle=6, Brad=60, Hal=24, Lynne=43}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60 Hal 24
+8: Lynne 43
+9:
+
+Zoran Zoe Lisa Victor Kyle Brad Hal Lynne 
+remove Fred hash index 5
+remove Fred returns null
+{Zoran=76, Zoe=6, Lisa=43, Victor=46, Kyle=6, Brad=60, Hal=24, Lynne=43}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60 Hal 24
+8: Lynne 43
+9:
+
+remove Hal hash index 7
+remove Hal returns 24
+{Zoran=76, Zoe=6, Lisa=43, Victor=46, Kyle=6, Brad=60, Lynne=43}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60
+8: Lynne 43
+9:
+
+remove Brad hash index 7
+remove Brad returns 60
+{Zoran=76, Zoe=6, Lisa=43, Victor=46, Kyle=6, Lynne=43}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7:
+8: Lynne 43
+9:
+
+remove Lynne hash index 8
+remove Lynne returns 43
+{Zoran=76, Zoe=6, Lisa=43, Victor=46, Kyle=6}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7:
+8:
+9:
+
+remove Lisa hash index 3
+remove Lisa returns 43
+{Zoran=76, Zoe=6, Victor=46, Kyle=6}
+0:
+1:
+2: Zoran 76 Zoe 6
+3:
+4:
+5: Victor 46 Kyle 6
+6:
+7:
+8:
+9:
+
+remove Lisa hash index 3
+remove Lisa returns null
+{Zoran=76, Zoe=6, Victor=46, Kyle=6}
+0:
+1:
+2: Zoran 76 Zoe 6
+3:
+4:
+5: Victor 46 Kyle 6
+6:
+7:
+8:
+9:
+
+remove Zoran hash index 2
+rehash 5
+remove Zoran returns 76
+{Kyle=6, Victor=46, Zoe=6}
+0: Kyle 6 Victor 46
+1:
+2: Zoe 6
+3:
+4:
+
+remove Zoe hash index 2
+remove Zoe returns 6
+{Kyle=6, Victor=46}
+0: Kyle 6 Victor 46
+1:
+2:
+3:
+4:
+
+remove Victor hash index 0
+rehash 2
+remove Victor returns 46
+{Kyle=6}
+0:
+1: Kyle 6
+
+remove Hal hash index 1
+rehash 1
+remove Hal returns null
+{Kyle=6}
+0: Kyle 6
+
+17c17
+< put Brad 60 hash index 2 returns 60
+---
+> put Brad 60 hash index 2 returns 46
+25c25
+< put Hal 24 hash index 2 returns 24
+---
+> put Hal 24 hash index 2 returns 10
+98a99
+> remove Fred hash index 5
+111a113
+> remove Hal hash index 7
+124a127
+> remove Brad hash index 7
+137a141
+> remove Lynne hash index 8
+150a155
+> remove Lisa hash index 3
+163a169
+> remove Lisa hash index 3
+176a183,184
+> remove Zoran hash index 2
+> rehash 5
+178,179c186,187
+< {Zoe=6, Victor=46, Kyle=6}
+< 0:
+---
+> {Kyle=6, Victor=46, Zoe=6}
+> 0: Kyle 6 Victor 46
+184,188d191
+< 5: Victor 46 Kyle 6
+< 6:
+< 7:
+< 8:
+< 9:
+190c193
+< rehash 5
+---
+> remove Zoe hash index 2
+198a202
+> remove Victor hash index 0
+204a209,210
+> remove Hal hash index 1
+> rehash 1
+207,208c213
+< 0:
+< 1: Kyle 6
+---
+> 0: Kyle 6
+
+SCORE: 75/75

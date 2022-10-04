@@ -1,0 +1,205 @@
+put Brad 46 hash index 2 returns null
+{}
+0:
+1:
+2: Brad 46
+3:
+4:
+
+put Hal 10 hash index 2 returns null
+{}
+0:
+1:
+2: Hal 10 Brad 46
+3:
+4:
+
+put Brad 60 hash index 2 returns 60
+{}
+0:
+1:
+2: Hal 10 Brad 60
+3:
+4:
+
+put Hal 24 hash index 2 returns 24
+{}
+0:
+1:
+2: Hal 24 Brad 60
+3:
+4:
+
+put Kyle 6 hash index 0 returns null
+{}
+0: Kyle 6
+1:
+2: Hal 24 Brad 60
+3:
+4:
+
+put Lisa 43 hash index 3 returns null
+{}
+0: Kyle 6
+1:
+2: Hal 24 Brad 60
+3: Lisa 43
+4:
+
+put Lynne 43 hash index 3 returns null
+{}
+0: Kyle 6
+1:
+2: Hal 24 Brad 60
+3: Lynne 43 Lisa 43
+4:
+
+hash code of Victor is -1732826265
+put Victor 46 hash index 0 returns null
+{}
+0:
+1:
+2:
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60 Hal 24
+8: Lynne 43
+9:
+
+put Zoe 6 hash index 2 returns null
+{}
+0:
+1:
+2: Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60 Hal 24
+8: Lynne 43
+9:
+
+put Zoran 76 hash index 2 returns null
+{}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60 Hal 24
+8: Lynne 43
+9:
+
+remove Fred returns null
+{}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60 Hal 24
+8: Lynne 43
+9:
+
+remove Hal returns 24
+{}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7: Brad 60
+8: Lynne 43
+9:
+
+remove Brad returns 60
+{}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7:
+8: Lynne 43
+9:
+
+remove Lynne returns 43
+{}
+0:
+1:
+2: Zoran 76 Zoe 6
+3: Lisa 43
+4:
+5: Victor 46 Kyle 6
+6:
+7:
+8:
+9:
+
+remove Lisa returns 43
+{}
+0:
+1:
+2: Zoran 76 Zoe 6
+3:
+4:
+5: Victor 46 Kyle 6
+6:
+7:
+8:
+9:
+
+remove Lisa returns null
+{}
+0:
+1:
+2: Zoran 76 Zoe 6
+3:
+4:
+5: Victor 46 Kyle 6
+6:
+7:
+8:
+9:
+
+remove Zoran returns 76
+{}
+0:
+1:
+2: Zoe 6
+3:
+4:
+5: Victor 46 Kyle 6
+6:
+7:
+8:
+9:
+
+remove Zoe returns 6
+{}
+0: Kyle 6 Victor 46
+1:
+2:
+3:
+4:
+
+remove Victor returns 46
+{}
+0:
+1: Kyle 6
+
+remove Hal returns null
+{}
+0:
+1: Kyle 6
+

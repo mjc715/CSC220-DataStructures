@@ -1,0 +1,39 @@
+{b={b=1}}
+put(c, 2) = null
+{b={b=1, c=2}}
+put(c, 7) = 2
+{b={b=1, c=7}}
+put(a, 0) = null
+{a={a=0, b=1, c=7}}
+put(d, 3) = null
+{a={a=0, b=1}, c={c=7, d=3}}
+put(d, 7) = 3
+{a={a=0, b=1}, c={c=7, d=7}}
+remove(a) = 0
+{b={b=1, c=7, d=7}}
+put(e, 9) = null
+{b={b=1, c=7}, d={d=7, e=9}}
+put(f, 8) = null
+{b={b=1, c=7}, d={d=7, e=9, f=8}}
+remove(b) = 1
+{c={c=7, d=7}, e={e=9, f=8}}
+remove(e) = 9
+{c={c=7, d=7, f=8}}
+put(e, 9) = null
+{c={c=7, d=7}, e={e=9, f=8}}
+put(b, 1) = null
+{b={b=1, c=7, d=7}, e={e=9, f=8}}
+remove(f) = 8
+{b={b=1, c=7}, d={d=7, e=9}}
+put(f, 3) = null
+{b={b=1, c=7}, d={d=7, e=9, f=3}}
+put(g, 4) = null
+{b={b=1, c=7}, d={d=7, e=9}, f={f=3, g=4}}
+remove(d) = 7
+{b={b=1, c=7, e=9}, f={f=3, g=4}}
+put(d, 6) = null
+{b={b=1, c=7}, d={d=6, e=9}, f={f=3, g=4}}
+put(h, 8) = null
+{b={b=1, c=7}, d={d=6, e=9}, f={f=3, g=4, h=8}}
+remove(e) = 9
+{b={b=1, c=7}, d={d=6, f=3}, g={g=4, h=8}}

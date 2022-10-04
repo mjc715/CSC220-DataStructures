@@ -1,0 +1,263 @@
+The founders of Google invented the PageRank algorithm to determine the signficance
+of each web page.  Here it is in action on a simple example.
+
+java PageRank
+page 0 links to pages 1 2 3
+page 1 links to pages 2 3
+page 2 links to pages 3
+page 3 links to pages 0
+
+1.0	1.0	1.0	1.0	
+1.0	0.3333333333333333	0.8333333333333333	1.8333333333333333	
+1.8333333333333333	0.3333333333333333	0.5	1.3333333333333333	
+1.3333333333333333	0.611111111111111	0.7777777777777777	1.2777777777777777	
+1.2777777777777777	0.4444444444444444	0.75	1.5277777777777777	
+1.5277777777777777	0.4259259259259259	0.6481481481481481	1.3981481481481481	
+1.3981481481481481	0.5092592592592592	0.7222222222222221	1.3703703703703702	
+1.3703703703703702	0.4660493827160494	0.720679012345679	1.442901234567901	
+1.442901234567901	0.4567901234567901	0.6898148148148148	1.4104938271604937	
+1.4104938271604937	0.48096707818930035	0.7093621399176954	1.3991769547325101	
+1.3991769547325101	0.4701646090534979	0.710648148148148	1.4200102880658434	
+1.4200102880658434	0.46639231824417005	0.701474622770919	1.412122770919067	
+1.412122770919067	0.47333676268861447	0.7065329218106995	1.4080075445816185	
+1.4080075445816185	0.4707075903063556	0.7073759716506629	1.4139088934613624	
+1.4139088934613624	0.4693358481938728	0.7046896433470506	1.4120656149977135	
+1.4120656149977135	0.4713029644871208	0.7059708885840572	1.4106605319311079	
+1.4106605319311079	0.4706885383325712	0.7063400205761315	1.4123109091601886	
+1.4123109091601886	0.4702201773103693	0.7055644464766548	1.4119044670527865	
+1.4119044670527865	0.47077030305339623	0.7058803917085809	1.4114448381852358	
+1.4114448381852358	0.47063482235092885	0.7060199738776269	1.4119003655862077	
+
+A + B + C + D = 4
+D = A
+B = 1/3 A
+C = 1/3 A + 1/2 B
+C = 1/3 A + 1/6 A = 1/2 A
+
+A + 1/3 A + 1/2 A + A = 4
+
+17/6 A = 4
+
+A = 24/17
+
+Each web page is an "influencer".  Initially, each page is given 1.0 votes of
+influence.
+
+1.0	1.0	1.0	1.0	
+
+A vote is taken: each page splits its influence equally among the pages to which it
+links:
+
+page 0 links to pages 1 2 3
+page 1 links to pages 2 3
+page 2 links to pages 3
+page 3 links to pages 0
+
+After the first vote, web page 3 has 1.833333... votes of influence because it gets
+
+1/3 of a vote from web page 0
+1/2 of a vote from web page 1
+and 1 vote from web page 2.
+
+That adds up to 1 5/6 = 1.8333333....
+
+That's the second line
+1.0	0.3333333333333333	0.8333333333333333	1.8333333333333333	
+
+Please do not go any further and ask questions if you don't understand this or where
+the other numbers come from.
+
+In subsequent lines, you see the result of more votes.  Every time, each web site
+"spends" all its votes on pages it links to and only ends up with what it "receives"
+from pages that link to it.
+
+1.8333333333333333	0.3333333333333333	0.5	1.3333333333333333	
+1.3333333333333333	0.611111111111111	0.7777777777777777	1.2777777777777777	
+1.2777777777777777	0.4444444444444444	0.75	1.5277777777777777	
+1.5277777777777777	0.4259259259259259	0.6481481481481481	1.3981481481481481	
+1.3981481481481481	0.5092592592592592	0.7222222222222221	1.3703703703703702	
+1.3703703703703702	0.4660493827160494	0.720679012345679	1.442901234567901	
+1.442901234567901	0.4567901234567901	0.6898148148148148	1.4104938271604937	
+
+As you can see, the numbers starts to converge.  To what?  To an influence for each
+web page such that it ends up with the SAME influence after the next vote.
+
+The original PageRank algorithm is a little more complicated, but in addition to
+MTH210, you also will need MTH224 to understand the difference.  This one is good
+enough.
+
+QUESTION 1 (HARD): Can you figure out what the iteration converges to (expressed as
+fractions like 1 5/6)?
+ 
+Hint: Votes are split but not created or destroyed, so the total influence is always 4.
+
+You probably know the algorithm for QUESTION 1, but you may not realize it.
+Unfortunately, this algorithm is O(n^3) in the number of web pages.  A billion cubed
+is not so good.
+
+QUESTION 2 (EASY): can you implement the iteration above?  Google determined that
+even for the entire internet, it only take 40 to 50 iterations before it converges,
+meaning the numbers stop changing much.  That will be the lab assignment.
+
+It turns out the obvious way to implement the iteration is still not so practical.
+
+For example, the second line (above) is (as fractions)
+
+1	1/3	5/6	11/6
+
+The "fractional" votes are
+
+(1, 1/3)
+(2, 1/3)
+(3, 1/3)
+(2, 1/6)
+(3, 1/6)
+(3, 5/6)
+(0, 11/6)
+
+For example, the vote (3, 1/6) is there because page 1 has influence 1/3 and splits
+it between page 2 and page 3.
+
+Of course, the computer uses float or double so it's actually
+
+(1, 0.3333333333333333)
+(2, 0.3333333333333333)
+(3, 0.3333333333333333)
+(2, 0.1666666666666667)
+(3, 0.1666666666666667)
+(3, 0.8333333333333333)
+(0, 1.8333333333333333)
+
+Suppose we have a billion web pages with an average of 8 links each.  So the total
+number of fractional votes is 8 billion.
+
+To determine all these votes, we have to read all the page file disks.  But the page
+files are contiguous on the hard disk.  We can read them at 200 megabytes per second
+using current technology.  Reading 64 megabytes (8 links uses 64 bytes) takes 320
+seconds or about 5 minutes.  That's not too bad.
+
+We probably will need to stream the votes into a file on a hard disk because they
+actually take MORE space than the page files.  Instead of eight links and one
+number, each has a link and a number.
+
+Unfortunately, to CAST a vote such as
+
+(3, 0.8333333333333333)
+
+requires that we read the file for page 3 and add 0.8333333333333333 to its vote
+tally (assuming we set it to zero before starting the casting).  That takes 1ms to
+read and 1ms to write.  So 8 billion time 2 ms or 16 billion ms which is 16 million
+seconds.  How long is that?  185 days!  That's 6 months!
+
+If we iterate 40 times to get it to converge, it will take 20 years!!!!
+
+
+QUESTION 3 (HARD): How can you calculate each iteration faster?
+
+Hint:  Use something you learned in class this semester!
+
+ANSWER?
+
+The reason voting is so slow is that the votes are in an arbitrary order by index.
+What if they were ordered by increasing index?  Then we could read all the page
+files in order of increasing index and all the votes in order of increasing index
+and "put the information together", meaning when we have page file #1234567 in
+memory, we update its priority using all the votes with that index.
+
+Let's order the votes from above by index.
+
+(0, 1.8333333333333333)
+(1, 0.3333333333333333)
+(2, 0.3333333333333333)
+(2, 0.1666666666666667)
+(3, 0.3333333333333333)
+(3, 0.1666666666666667)
+(3, 0.8333333333333333)
+
+We read in vote
+
+(0, 1.8333333333333333)
+
+We read in page 0 and set its total priority to zero
+
+The current vote is for page 0 so we add 1.8333333333333333 to its priority.
+
+We read in vote
+
+(1, 0.3333333333333333)
+
+The current vote is for page 1, so we are done with page 0 and write it out
+
+1.8333333333333333
+
+We read in page 1 and set its total priority to zero
+
+The current vote is for page 1 so we add 0.3333333333333333 to its priority.
+
+We read in vote
+
+(2, 0.3333333333333333)
+
+The current vote is for page 2, so we are done with page 1 and write it out.
+
+0.3333333333333333
+
+We read in page 2 and set its total priority to zero
+
+The current vote is for page 2 so we add 0.3333333333333333 to its priority.
+
+We read in vote
+
+(2, 0.1666666666666667)
+
+The current vote is for page 2 so we add 0.1666666666666667 to its priority.
+
+We read in vote
+
+(3, 0.3333333333333333)
+
+The current vote is for page 3, so we are done with page 2 and write it out.
+
+0.5
+
+We read in page 3 and set its total priority to zero
+
+The current vote is for page 3 so we add 0.3333333333333333 to its priority.
+
+We read in vote
+
+(3, 0.1666666666666667)
+
+The current vote is for page 3 so we add 0.1666666666666667 to its priority.
+
+We read in vote
+
+(3, 0.8333333333333333)
+
+The current vote is for page 3 so we add 0.8333333333333333 to its priority.
+
+There are no more votes, so we are done with page 3 and write it out.
+
+1.3333333333333333
+
+
+We are reading the page files and votes from different disks and writing the updated
+page files to a third disk.  This happens at 200 megabytes per second, so the total
+time is 10 minutes (the votes are twice as big as the page files).
+
+
+What method did we use??  How did we sort the votes??
+
+External MergeSort.  That splits the file in half and reads and writes the halves
+log2(n) times, where n is 8 billion.
+
+5 minutes times log2(8,000,000,000) = 5 * 33.
+
+That's still less than 3 hours.
+
+Iterating voting 40 times takes 5 days.  Not super-great, but still less than 20 years!!!
+
+
+
+
+

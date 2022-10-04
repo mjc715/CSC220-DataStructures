@@ -1,0 +1,26 @@
+Enter word file. 
+dict
+Enter jumble. 
+toanb
+toanb unjumbled is [baton, botan]
+Enter jumble. 
+lugyl
+lugyl unjumbled is [gully]
+Enter jumble. 
+roylop
+roylop unjumbled is [poorly]
+Enter jumble. 
+bothed
+bothed unjumbled is [hotbed]
+Enter jumble. 
+
+Enter letters from clues. 
+btuloood
+How many letters in the first word? 
+3
+[blo, bol, lob, obl] [outdo]
+[boo] [tould]
+[dol, lod, old] [bouto]
+[doo] [blout, boult]
+[loo] [doubt]
+[out, tou] [blood, boldo]

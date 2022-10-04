@@ -1,0 +1,234 @@
+You should know by now that if you insert the following elements
+
+3 1 4 5 9 2 6
+
+into a binary search tree, you get
+
+                      3
+          1                       4
+                2                       5
+                                           9
+                                          6  
+
+That's not a really bushy tree, but if you insert them in increasing
+order
+
+1 2 3 4 5 6 9
+
+the result is really ``stringy''
+
+                      1
+                                  2
+                                        3
+                                           4
+                                            5
+                                             6
+                                              9
+
+which is no better than using a linked list!  Looking up 9 requires 9
+comparisons, or n.
+
+Other orders, such as
+
+4 2 6 3 9 1 5
+
+give you a perfect tree
+
+                      4
+          2                       6
+    1           3           5           9
+
+Looking up 9 requires 3 comparisons, which is log2(n) (rounded up).
+
+The point is that there are lots of different possible binary search
+trees for the same data, and some are much better than others.
+
+If you get the input in sorted order, it will take O(n) to insert the
+n'th element and O(n^2) to insert them all.  If the order is just
+right, the tree can be well balanced with O(log n) insert and lookup
+time.  But how can we always make it well balanced?
+
+
+			B-TREEs
+
+IDEA: trinary?  2-3 tree: Each node is a list with two or three
+entries.  Here is some data:
+
+Alex 17
+Brad 46
+Ivy 10
+Kyle 6
+Lisa 43
+Lynne 43
+Reid 27
+Victor 46
+Zoe 6
+
+Let's insert these in sorted order (always the worst case).  This is a
+Map implemented using an ArrayList, which is an array and a size.  All
+arrays will have length 4, no more.
+
+(Alex Brad Ivy)
+ 17   46   10
+
+That's o.k.  Keep inserting:
+
+(Alex Brad Ivy Kyle)
+ 17   46   10  6
+
+Oops.  Four is too many in a list since we want two or three.  So
+split it into two lists.
+
+(Alex Brad) (Ivy Kyle)
+ 17   46     10  6
+
+Where will we store these lists?  In a list!  If the value is a list,
+what should be the key?  Just use the first key in the list.
+
+(Alex        Ivy)
+ (Alex Brad) (Ivy Kyle)
+  17   46     10  6
+
+Entries higher in the tree have lists as values.  The root list has
+two entries.  The first entry has key Alex and a list with two entries
+as its value.  The second entry has key Ivy and a list with two
+entries as its value.
+
+Note that the keys (the names) can appear more than once, just like
+the headings on the top of the pages of a dictionary and the spine of
+the encyclopedia if it has multiple volumes.
+
+(Alex        Ivy)
+ (Alex Brad) (Ivy Kyle Lisa Lynne)
+  17   46     10  6    43   43
+
+Oop, a list is too full again!  So split it
+
+(Alex        Ivy        Lisa)
+ (Alex Brad) (Ivy Kyle) (Lisa Lynne)
+  17   46     10  6      43   43
+
+The parent (root) now has a third subtree.
+
+Add Reid and Victor
+
+(Alex        Ivy        Lisa)
+ (Alex Brad) (Ivy Kyle) (Lisa Lynne Reid Victor)
+  17   46     10  6      43   43    27   46
+
+Oops, too full.  Split it.
+
+(Alex        Ivy        Lisa         Reid)
+ (Alex Brad) (Ivy Kyle) (Lisa Lynne) (Reid Victor)
+  17   46     10  6      43   43      27   46
+
+Oops.  Root list is too full.  Split it.
+
+(Alex                    Lisa)
+ (Alex        Ivy)       (Lisa         Reid)
+  (Alex Brad) (Ivy Kyle)  (Lisa Lynne) (Reid Victor)
+   17   46     10  6       43   43      27   46
+
+What we have is a new root list with Alex and Lisa in it.  The old
+root list has been split into two sublists.  The new root list points
+to them.  This is weird tree because it grows from the root.
+
+How can we find Kyle?  At the top we see two list entries with keys
+Alex and Lisa.  Which one contains Kyle (if he is there)?  Why?  Well,
+Lisa is the smallest key in its list on down.  So Kyle can't be there.
+But Kyle does come after Alex.  So it could be there.
+
+Continuing down from Alex, we see two list entries with keys Alex and
+Ivy.  This time Kyle comes after both of them.  So Kyle must be under
+Ivy (if Kyle is there).
+
+Finally, we are in an ordinary directory list and we find Kyle in the
+usual way.
+
+How long does this take?  Well, how many levels are there?  All n
+entries are in the lowest level.  The next level up has at most n/2
+and possibly as few as n/3.  Why?  Because all the bottom level lists
+have 2 or 3 entries.  And so forth.  So there are definitely at most
+log2(n) levels and possibly as few as log3(n).  It's all O(log n).
+Dealing with one list might require three comparisons, but that is
+still O(1).  O(log n) * O(1) = O(log n).
+
+Let's remove Kyle:
+
+(Alex               Lisa)
+ (Alex        Ivy)  (Lisa         Reid)
+  (Alex Brad) (Ivy)  (Lisa Lynne) (Reid Victor)
+   17   46     10     43   43      27   46
+
+Oops.  The Ivy leaf has only one entry.  It should have at least two.
+
+Idea:  merge with a neighboring child.
+
+(Alex             Lisa)
+ (Alex)           (Lisa         Reid)
+  (Alex Brad Ivy)  (Lisa Lynne) (Reid Victor)
+   17   46   10     43   43      27   46
+
+Oops.  The second level Alex has only one entry (Alex).  Merge it with
+a neighbor.
+
+(Alex)
+ (Alex            Lisa         Reid)
+  (Alex Brad Ivy) (Lisa Lynne) (Reid Victor)
+   17   46   10    43   43      27   46
+
+Oops.  The root has only one entry.  Remove it.
+
+(Alex            Lisa         Reid)
+ (Alex Brad Ivy) (Lisa Lynne) (Reid Victor)
+  17   46   10    43   43      27   46
+
+Let's add Zoe.
+
+(Alex            Lisa         Reid)
+ (Alex Brad Ivy) (Lisa Lynne) (Reid Victor Zoe)
+  17   46   10    43   43      27   46     6
+
+Now let's remove Lisa.  Notice we had to change the key in the top
+list because the first key in a lower list changed.
+
+(Alex            Lynne   Reid)
+ (Alex Brad Ivy) (Lynne) (Reid Victor Zoe)
+  17   46   10    43      27   46     6
+
+Oops.  Lynne's list is too small.  Since the neighbor has three elements, take one:
+
+(Alex         Ivy         Reid)
+ (Alex Brad) (Ivy Lynne) (Reid Victor Zoe)
+  17   46     10    43    27   46     6
+
+Notice we had to update the key of the parent from Lynne to Ivy.
+
+
+EXTERNAL B-TREES
+
+A big application of b-trees is out of core, on the hard disk.  Since
+the computer reads a kilobyte at at time from the hard disk, we might
+as well make the lists use up the whole kilobyte.  In that case the
+lists range in size from 16 to 47 instead of 2 to 3.
+
+In general, the length L of the array is a power of 2.
+If size <= 1/4 L, then it is "too thin" and we merge it with a neighbor.
+If size > 3/4 L, then it is "too fat", and we split it.
+
+With L=64:
+
+With 1 disk read, you can access at least 32 records.
+With 2 disk reads, 32*32 = 1024 records.
+With 6 disk reads, 1024*1024*1024 records, which is more than a billion.
+So the IRS can access anyone's tax record using 6 disk seeks, which takes about 6 milliseconds.  That's pretty good.
+
+JAVA TreeSet and TreeMap
+
+Java provides TreeSet and TreeMap implementing using a Red Black Tree.
+This is similar to a BTree, but it uses the binary tree structure from
+our BST.java.  Each node is also given a COLOR: red or black.  Red
+means that the node is clustered with its parent.  I drew a picture on
+the board to show how this allows you to make 3-nodes and 4-nodes as
+in BTree.
+

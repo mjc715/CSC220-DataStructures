@@ -1,0 +1,149 @@
+1. Update Main.java again.
+
+
+2. In search, create two variables:
+
+    // Iterator into list of page indexes for each key word.
+    Iterator<Long>[] wordFileIterators =
+      (Iterator<Long>[]) new Iterator[searchWords.size()];
+    
+    // Current page index in each list, just ``behind'' the iterator.
+    long[] currentPageIndexes;
+    
+   Write a loop to initialize the entries of wordFileIterators.
+   wordFileIterators[i] should be set to an iterator over the word
+   file of searchWords[i].
+
+   Initialize currentPageIndexes.  You just have to allocate the
+   array.  You don't have to write a loop to initialize the elements
+   of the array because all its elements will automatically be zero.
+
+   
+
+3. Implement allEqual and getLargest:
+
+  /** Check if all elements in an array of long are equal.
+      @param array an array of numbers
+      @return true if all are equal, false otherwise
+  */
+  private boolean allEqual (long[] array) {
+
+  /** Get the largest element of an array of long.
+      @param array an array of numbers
+      @return largest element
+  */
+  private long getLargest (long[] array) {
+
+
+4. Implement getNextPageIndexes
+
+  /** Get the largest element of currentPageIndexes.  If all the
+      elements are equal, increment it (largest++).
+
+      For each element of currentPageIndexes that is not equal to
+      largest, get the next page index for that word: call next() for
+      wordFileIterator[i] and put the result into
+      currentPageIndexes[i].  But if hasNext is false, return false
+      instead.
+
+      Return true.
+
+      @param currentPageIndexes array of current page indexes
+      @param wordFileIterators array of iterators with next page indexes
+      @return true if all minimum page indexes updates, false otherwise
+  */
+  private boolean getNextPageIndexes
+    (long[] currentPageIndexes, Iterator<Long>[] wordFileIterators) {
+
+
+5. Implement the loop of search.  While getNextPageIndexes is true
+   check if the entries of currentPageIndexes are all equal.  If so, you
+   have a found a match.  Print out its URL.
+
+   Download Main.java from from the prog11 web page.
+   Run Main.  The printout should end with
+
+edu.miami.cs.www/home/vjm/csc220/google/snow.html
+edu.miami.cs.www/home/vjm/csc220/google/water.html
+Found [mary, jack, jill] on
+
+   Switch Main.java to using starting url google2:
+
+    // startingURLs.add("http://www.cs.miami.edu/home/vjm/csc220/google/mary.html");
+    startingURLs.add("http://www.cs.miami.edu/home/vjm/csc220/google2/1.html");
+
+   And change true to false towards the bottom
+
+    List<String> keyWords = new ArrayList<String>();
+    if (false) {
+      keyWords.add("mary");
+      keyWords.add("jack");
+      keyWords.add("jill");
+    } else {
+
+   For input 2 3 5, you should see (printed out not in the GUI)
+
+edu.miami.cs.www/home/vjm/csc220/google2/30.html
+edu.miami.cs.www/home/vjm/csc220/google2/60.html
+edu.miami.cs.www/home/vjm/csc220/google2/90.html
+
+   For input 2 3 4, you should get
+
+edu.miami.cs.www/home/vjm/csc220/google2/12.html
+edu.miami.cs.www/home/vjm/csc220/google2/24.html
+edu.miami.cs.www/home/vjm/csc220/google2/36.html
+edu.miami.cs.www/home/vjm/csc220/google2/48.html
+edu.miami.cs.www/home/vjm/csc220/google2/60.html
+edu.miami.cs.www/home/vjm/csc220/google2/72.html
+edu.miami.cs.www/home/vjm/csc220/google2/84.html
+edu.miami.cs.www/home/vjm/csc220/google2/96.html
+
+
+HOMEWORK
+
+6. Declare a variable inside search:
+
+    // Matching pages with the least popular page on the top of the
+    // queue.
+    PriorityQueue<Long> bestPageIndexes;
+
+   Inside the Goggle class create a PageComparator such that
+
+	compare(pageIndex1, pageIndex2)
+
+   returns a -1 of the page with index pageIndex1 has lower priority
+   than the page with index pageIndex2, +1 if it is higher, and 0 if
+   they are the same.
+   
+   Initialize bestPageIndices to use this Comparator.
+
+
+7. When you find a matching page, after you print it out, do the
+   following.
+
+   If the priority queue is not "full" (has numResults elements), just
+   offer the matching page index.
+
+   If the priority queue is full, use peek() to determine if matching
+   page should go into the queue.
+
+   If so, do a poll() before the offer.
+
+
+8. Create an array of String which will hold the results.  How big
+   should it be?
+
+   Unload the priority queue into the string.  But polling the queue
+   gives you the pages in reverse order from least significant to
+   most significant.  What should you do?
+
+
+9. Test your program on "2", "2 3", "2 5", "2 3 5".  You should only
+   get N.html if N is divisible by all the search "words".  For
+   example, "2 5" only gives multiples of 10.
+
+   Look at the printout from step 5 (you might want to print a spacer
+   between printouts) to make sure it is giving the pages in order of
+   decreasing number of reference counts.
+
+

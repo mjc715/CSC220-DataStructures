@@ -1,0 +1,28 @@
+1. Implement HashTable.put.  Output in step1.txt.
+
+2. Implement find.  Output in step2.txt.
+
+   Copy Jumble.java (whatever is your latest version) to prog10 and
+   change the package on top.  Modify it to use HashTable for its Map.
+   Load in words and look up retupmuc and obezag.  Try to load dict
+   instead.  Pretty slow, right?  (Kill it.)
+
+3. Implement rehash.  Output in step3.txt.
+
+   Now try to load dict in Jumble.  It should be fast.  Look up
+   obezag.
+
+HOMEWORK
+
+4. Implement remove.  Output in step4.txt.
+
+5. Implement EntryIterator.  Output in step5.txt.
+
+Do steps 10 and 11 from last time.
+
+If you did them already, just copy Jumble.java to prog10 and change
+the package at the top.
+
+I will only check the Jumble.java in this directory.
+
+

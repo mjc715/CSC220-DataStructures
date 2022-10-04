@@ -1,0 +1,100 @@
+tree = {}
+put(a, 0) = null
+{a=0}
+a 0
+put(b, 1) = null
+{a=0, b=1}
+a 0
+b 1
+put(c, 2) = null
+{a=0, b=1, c=2}
+a 0
+b 1
+c 2
+put(d, 3) = null
+{a={a=0, b=1}, c={c=2, d=3}}
+a
+  a 0
+  b 1
+c
+  c 2
+  d 3
+put(e, 4) = null
+{a={a=0, b=1}, c={c=2, d=3, e=4}}
+a
+  a 0
+  b 1
+c
+  c 2
+  d 3
+  e 4
+put(f, 5) = null
+{a={a=0, b=1}, c={c=2, d=3}, e={e=4, f=5}}
+a
+  a 0
+  b 1
+c
+  c 2
+  d 3
+e
+  e 4
+  f 5
+put(g, 6) = null
+{a={a=0, b=1}, c={c=2, d=3}, e={e=4, f=5, g=6}}
+a
+  a 0
+  b 1
+c
+  c 2
+  d 3
+e
+  e 4
+  f 5
+  g 6
+put(h, 7) = null
+{a={a={a=0, b=1}, c={c=2, d=3}}, e={e={e=4, f=5}, g={g=6, h=7}}}
+a
+  a
+    a 0
+    b 1
+  c
+    c 2
+    d 3
+e
+  e
+    e 4
+    f 5
+  g
+    g 6
+    h 7
+put(i, 8) = null
+{a={a={a=0, b=1}, c={c=2, d=3}}, e={e={e=4, f=5}, g={g=6, h=7, i=8}}}
+a
+  a
+    a 0
+    b 1
+  c
+    c 2
+    d 3
+e
+  e
+    e 4
+    f 5
+  g
+    g 6
+    h 7
+    i 8
+remove(a) = 0
+{b={b={b=1, c=2, d=3}, e={e=4, f=5}, g={g=6, h=7, i=8}}}
+b
+  b
+    b 1
+    c 2
+    d 3
+  e
+    e 4
+    f 5
+  g
+    g 6
+    h 7
+    i 8

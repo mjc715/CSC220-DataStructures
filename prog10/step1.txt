@@ -1,0 +1,161 @@
+put Brad 46 hash index 2 returns null
+{}
+0:
+1:
+2: Brad 46
+3:
+4:
+
+put Hal 10 hash index 2 returns null
+{}
+0:
+1:
+2: Hal 10 Brad 46
+3:
+4:
+
+put Brad 60 hash index 2 returns null
+{}
+0:
+1:
+2: Brad 60 Hal 10 Brad 46
+3:
+4:
+
+put Hal 24 hash index 2 returns null
+{}
+0:
+1:
+2: Hal 24 Brad 60 Hal 10 Brad 46
+3:
+4:
+
+put Kyle 6 hash index 0 returns null
+{}
+0: Kyle 6
+1:
+2: Hal 24 Brad 60 Hal 10 Brad 46
+3:
+4:
+
+put Lisa 43 hash index 3 returns null
+{}
+0: Kyle 6
+1:
+2: Hal 24 Brad 60 Hal 10 Brad 46
+3: Lisa 43
+4:
+
+put Lynne 43 hash index 3 returns null
+{}
+0: Kyle 6
+1:
+2: Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+hash code of Victor is -1732826265
+put Victor 46 hash index 0 returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+put Zoe 6 hash index 2 returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+put Zoran 76 hash index 2 returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Fred returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Hal returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Brad returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Lynne returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Lisa returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Lisa returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Zoran returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Zoe returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Victor returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
+remove Hal returns null
+{}
+0: Victor 46 Kyle 6
+1:
+2: Zoran 76 Zoe 6 Hal 24 Brad 60 Hal 10 Brad 46
+3: Lynne 43 Lisa 43
+4:
+
